@@ -197,5 +197,7 @@ $('#search').addEventListener('input',renderGrid);
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});renderGrid();}));
 
 applyLanguage();
+// Apply the initial collection theme before enabling tab-switch transitions.
+requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('theme-ready')));
 
 fetch('collection.json', {cache:'no-cache'}).then(response=>{if(!response.ok)throw new Error('Unable to load collection');return response.json();}).then(data=>{jerseys=data;featured=jerseys.filter(j=>collectionOf(j)==='modo' && Number.isFinite(j.featured)).sort((a,b)=>a.featured-b.featured);renderHero();renderGrid();}).catch(()=>{loadFailed=true;$('#hero-slides').innerHTML=`<p class="loading">${translated('loadError')}</p>`;});
