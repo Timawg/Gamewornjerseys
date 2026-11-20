@@ -1,5 +1,6 @@
 """Build a dependency-free GitHub Pages site from the collection and original files."""
 import json
+import hashlib
 import shutil
 from pathlib import Path
 
@@ -8,6 +9,12 @@ OUT = ROOT / 'dist'
 OUT.mkdir(exist_ok=True)
 for filename in ('index.html', 'styles.css', 'app.js'):
     shutil.copy2(ROOT / filename, OUT / filename)
+# Refresh browser caches whenever the stylesheet or application changes.
+html = (OUT / 'index.html').read_text()
+for filename in ('styles.css', 'app.js'):
+    version = hashlib.sha256((OUT / filename).read_bytes()).hexdigest()[:12]
+    html = html.replace(f'"{filename}"', f'"{filename}?v={version}"')
+(OUT / 'index.html').write_text(html)
 shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
 collection = json.loads((ROOT / 'collection.json').read_text())
 for jersey in collection:
