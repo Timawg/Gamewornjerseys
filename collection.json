@@ -321,5 +321,310 @@
       "MODO MAPP/Ulf Lillis Hansson 1979-80/Ulf Lilliis Hansson MoDo 1979-80_2_Untitled.jpg"
     ],
     "featured": null
+  },
+  {
+    "id": "other-01",
+    "name": "Brendan Shinnimin",
+    "number": 24,
+    "team": "Växjö Lakers",
+    "collection": "other",
+    "season": "2018-19",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Brendan Shinnimin Växjö Lakers",
+    "textFile": "Övriga Lag/Brendan Shinnimin Växjö Lakers/Brendan Shinnimin.txt",
+    "images": [
+      "Övriga Lag/Brendan Shinnimin Växjö Lakers/Brendan Shinnimin Växjö_2018_19_1_Untitled.jpg",
+      "Övriga Lag/Brendan Shinnimin Växjö Lakers/Brendan Shinnimin Växjö_2018_19_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-02",
+    "name": "Erik Stålnacke",
+    "number": 16,
+    "team": "Luleå Hockey",
+    "collection": "other",
+    "season": "1985-87",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Erik Stålnacke Luleå 1985-87",
+    "textFile": "Övriga Lag/Erik Stålnacke Luleå 1985-87/Erik Stålnacke Luleå.txt",
+    "images": [
+      "Övriga Lag/Erik Stålnacke Luleå 1985-87/Erik Stålnacke Luleå 1985-87_1_IMG_0322.jpeg",
+      "Övriga Lag/Erik Stålnacke Luleå 1985-87/Erik Stålnacke Luleå 1985_87_2_ntitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-03",
+    "name": "Erik Stålnacke",
+    "number": 16,
+    "team": "Skellefteå AIK",
+    "collection": "other",
+    "season": "1982-83",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Erik Stålnacke SAIK 1982-83",
+    "textFile": "Övriga Lag/Erik Stålnacke SAIK 1982-83/Erik Stålnacke SAIK.txt",
+    "images": [
+      "Övriga Lag/Erik Stålnacke SAIK 1982-83/Erik Stålnacke SAIK_1982_83_1_Untitled.jpg",
+      "Övriga Lag/Erik Stålnacke SAIK 1982-83/Erik Stålnacke SAIK_1982_83_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-04",
+    "name": "Jens Hellgren",
+    "number": 21,
+    "team": "Luleå Hockey",
+    "collection": "other",
+    "season": "1985-87",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Jens Hellgren Luleå 1985-87",
+    "textFile": "Övriga Lag/Jens Hellgren Luleå 1985-87/Jens Hellgren Luleå 1985-87.txt",
+    "images": [
+      "Övriga Lag/Jens Hellgren Luleå 1985-87/Jens Hellgren Luleå 1985_87_1_Untitled.jpg",
+      "Övriga Lag/Jens Hellgren Luleå 1985-87/Jens Hellgren Luleå röd 1985_87_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-05",
+    "name": "Johan Åkerman",
+    "number": 4,
+    "team": "HV71",
+    "collection": "other",
+    "season": "2007-08",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Johan Åkerman Hv71 2007-08",
+    "textFile": "Övriga Lag/Johan Åkerman Hv71 2007-08/Johan Åkerman.txt",
+    "images": [
+      "Övriga Lag/Johan Åkerman Hv71 2007-08/Johan_Åkerman_Hv71_SM-Guld 2007_08_1_Untitled.jpg",
+      "Övriga Lag/Johan Åkerman Hv71 2007-08/Johan Åkerman Hv71_SM-Guld 2007-08_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-06",
+    "name": "Johnny Forsman",
+    "number": 14,
+    "team": "Skellefteå AIK",
+    "collection": "other",
+    "season": "1983-84",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Johnny Forsman Skellefteå 1983-84",
+    "textFile": "Övriga Lag/Johnny Forsman Skellefteå 1983-84/Johnny Forsman.txt",
+    "images": [
+      "Övriga Lag/Johnny Forsman Skellefteå 1983-84/Johnny Forsman Skellefteå_1982_83_Untitled.jpg",
+      "Övriga Lag/Johnny Forsman Skellefteå 1983-84/Johnny Forsman Skellefteå 1982_83_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-07",
+    "name": "Josef Boumedienne",
+    "number": 78,
+    "team": "Djurgårdens IF",
+    "collection": "other",
+    "season": "",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Josef Boumedienne Djurgården",
+    "textFile": "Övriga Lag/Josef Boumedienne Djurgården/Josef Boumedienne.txt",
+    "images": [
+      "Övriga Lag/Josef Boumedienne Djurgården/Josef Boumedienne_Djurgården_1_Untitled.jpg",
+      "Övriga Lag/Josef Boumedienne Djurgården/Josef Boumedienne_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-08",
+    "name": "Kristian Näkyvä",
+    "number": 51,
+    "team": "Linköping HC",
+    "collection": "other",
+    "season": "2017-18",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Kristian Näkyvä LHC 2017-18",
+    "textFile": "Övriga Lag/Kristian Näkyvä LHC 2017-18/Kristian Näkyvä.txt",
+    "images": [
+      "Övriga Lag/Kristian Näkyvä LHC 2017-18/Kristian Näkyvä 2017-18 LHC_1_Untitled.jpg",
+      "Övriga Lag/Kristian Näkyvä LHC 2017-18/Kristian Näkyvä_LHC_2017-18_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-09",
+    "name": "Lars Hurtig",
+    "number": 26,
+    "team": "Luleå Hockey",
+    "collection": "other",
+    "season": "1985-87",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Lars Hurtig Luleå 1985-87",
+    "textFile": null,
+    "images": [
+      "Övriga Lag/Lars Hurtig Luleå 1985-87/Lars Hurtig Luleå 1985_87_1_Untitled.jpg",
+      "Övriga Lag/Lars Hurtig Luleå 1985-87/Lars Hurtig Luleå 1985_87_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-10",
+    "name": "Linus Söderström",
+    "number": 32,
+    "team": "Skellefteå AIK",
+    "collection": "other",
+    "season": "2025-26",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Linus Söderström Skellefteå Aik",
+    "textFile": "Övriga Lag/Linus Söderström Skellefteå Aik/Linus Söderström 2025-26.txt",
+    "images": [
+      "Övriga Lag/Linus Söderström Skellefteå Aik/Linus Söderström Skellefteå 2025_26_ SM_Guld_tröja_1_Untitled.jpg",
+      "Övriga Lag/Linus Söderström Skellefteå Aik/Linus Söderström Skellefteå 2025_26_ SM_Guld_tröja_2_Untitled.jpg",
+      "Övriga Lag/Linus Söderström Skellefteå Aik/Linus Söderström i finalen mot Rögle 2025-26_photomatch_BB260428PA086(1).jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-11",
+    "name": "Markus Ljungh",
+    "number": 61,
+    "team": "Linköping HC",
+    "collection": "other",
+    "season": "2020-21",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Markus Ljungh Linköping HC",
+    "textFile": "Övriga Lag/Markus Ljungh Linköping HC/Markus Ljungh 2020-21.txt",
+    "images": [
+      "Övriga Lag/Markus Ljungh Linköping HC/Markus Ljungh_LHC_1_Untitled.jpg",
+      "Övriga Lag/Markus Ljungh Linköping HC/Markus Ljungh LHC_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-12",
+    "name": "Mattias Weinhandl",
+    "number": 80,
+    "team": "Linköping HC",
+    "collection": "other",
+    "season": "2007-08",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Mattias Weinhandl LHC 2007-08",
+    "textFile": "Övriga Lag/Mattias Weinhandl LHC 2007-08/Mattias Weinhandl 2007-08.txt",
+    "images": [
+      "Övriga Lag/Mattias Weinhandl LHC 2007-08/Mattias Weinhandl Linköping 2007_08_1_Untitled.jpg",
+      "Övriga Lag/Mattias Weinhandl LHC 2007-08/Mattias Weinhandl Linköping 2007_08_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-13",
+    "name": "Robert Svehla",
+    "number": 9,
+    "team": "Malmö IF",
+    "collection": "other",
+    "season": "1993-94",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Robert Svehla 1993-94",
+    "textFile": "Övriga Lag/Robert Svehla 1993-94/Robert Svehla Malmö 1993-94.txt",
+    "images": [
+      "Övriga Lag/Robert Svehla 1993-94/Robert Svehla 1993-94_SM Guldtröja_1_Untitled.jpg",
+      "Övriga Lag/Robert Svehla 1993-94/Robert Svehla Malmö Sm Guldtröja 1993_94_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-14",
+    "name": "Roger Åkerström",
+    "number": 28,
+    "team": "Luleå Hockey",
+    "collection": "other",
+    "season": "2004-05",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Roger Åkerström Luleå",
+    "textFile": "Övriga Lag/Roger Åkerström Luleå/Roger Åkerström 2004-05.txt",
+    "images": [
+      "Övriga Lag/Roger Åkerström Luleå/Roger Åkerström Luleå 2005_05_1_IMG_9565.jpeg",
+      "Övriga Lag/Roger Åkerström Luleå/Roger_Åkerström_2_IMG_9568.jpeg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-15",
+    "name": "Roger Åkerström",
+    "number": 28,
+    "team": "Luleå Hockey",
+    "collection": "other",
+    "season": "2003-04",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Roger Åkerström Luleå 2003-04",
+    "textFile": "Övriga Lag/Roger Åkerström Luleå 2003-04/Roger Åkerström Luleå 2003-04.txt",
+    "images": [
+      "Övriga Lag/Roger Åkerström Luleå 2003-04/Roger Åkerström Luleå_röd tröja_1_Untitled.jpg",
+      "Övriga Lag/Roger Åkerström Luleå 2003-04/Roger Åkerström Luleå Röd tröja _2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-16",
+    "name": "Thomas “Bulan” Berglund",
+    "number": 10,
+    "team": "Luleå Hockey",
+    "collection": "other",
+    "season": "",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Thomas Bulan Berglund Luleå",
+    "textFile": "Övriga Lag/Thomas Bulan Berglund Luleå/Thomas Berglund.txt",
+    "images": [
+      "Övriga Lag/Thomas Bulan Berglund Luleå/Thomas Berglund_1_IMG_9562(2).jpeg",
+      "Övriga Lag/Thomas Bulan Berglund Luleå/Thomas Berglund_2_IMG_9563.jpeg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-17",
+    "name": "Tony Mårtensson",
+    "number": 18,
+    "team": "Brynäs IF",
+    "collection": "other",
+    "season": "",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Tony Mårtensson Brynäs",
+    "textFile": "Övriga Lag/Tony Mårtensson Brynäs/Tony Mårtensson Brynäs.txt",
+    "images": [
+      "Övriga Lag/Tony Mårtensson Brynäs/Tony Mårtensson Brynäs_1_Untitled.jpg",
+      "Övriga Lag/Tony Mårtensson Brynäs/Tony Mårtensson Brynäs_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-18",
+    "name": "Ulf Isaksson",
+    "number": 15,
+    "team": "AIK",
+    "collection": "other",
+    "season": "1984-85",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Ulf Isaksson AIK",
+    "textFile": "Övriga Lag/Ulf Isaksson AIK/Ulf Isaksson AIK.txt",
+    "images": [
+      "Övriga Lag/Ulf Isaksson AIK/Ulf Isaksson AIK_Pioneer_Vit 1984_85_1_Untitled.jpg",
+      "Övriga Lag/Ulf Isaksson AIK/Ulf Isaksson_AIK_Pioneer_1984_85_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "other-19",
+    "name": "Åke Lilljebjörn",
+    "number": 25,
+    "team": "Leksands IF",
+    "collection": "other",
+    "season": "1993-94",
+    "kind": "Jersey",
+    "folder": "Övriga Lag/Åke Lilljebjörn Leksand 1993-94",
+    "textFile": "Övriga Lag/Åke Lilljebjörn Leksand 1993-94/Åke Lilljebjörn Leksand 1993-94.txt",
+    "images": [
+      "Övriga Lag/Åke Lilljebjörn Leksand 1993-94/Åke Lilljebjörn Leksand 19993-94_1_Untitled.jpg",
+      "Övriga Lag/Åke Lilljebjörn Leksand 1993-94/Åke Lilljebjörn Leksand 1993-94_2_Untitled.jpg"
+    ],
+    "featured": null
   }
 ]

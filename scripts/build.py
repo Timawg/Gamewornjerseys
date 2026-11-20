@@ -18,7 +18,7 @@ for filename in ('styles.css', 'app.js'):
 shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
 collection = json.loads((ROOT / 'collection.json').read_text())
 for jersey in collection:
-    text = (ROOT / jersey['textFile']).read_bytes()
+    text = (ROOT / jersey['textFile']).read_bytes() if jersey.get('textFile') else b''
     encoding = 'utf-16' if text.startswith((b'\xff\xfe', b'\xfe\xff')) else 'utf-8-sig'
     jersey['description'] = text.decode(encoding).strip()
     for image in jersey['images']:

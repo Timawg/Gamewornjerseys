@@ -3,41 +3,46 @@ const escapeHTML = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({'
 const imageURL = (path) => path.split('/').map(encodeURIComponent).join('/');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let jerseys = [], featured = [], currentSlide = 0, filter = 'all';
+let activeCollection = location.hash === '#other-teams' ? 'other' : 'modo';
+const collectionOf = jersey => jersey.collection || 'modo';
+const teamName = jersey => jersey.team || 'MoDo Hockey';
 let paused = reducedMotion.matches, hovering = false, focusWithin = false, timer;
 const dialog = $('#jersey-dialog');
 
 const messages = {
   sv: {
+    otherTeams: 'Övriga lag', otherTitle: 'ÖVRIGA LAG', otherPageTitle: 'Övriga lag — Tröjsamlingen', otherIntro: 'Fler lag. Fler spelare. Samma passion för hockey.', otherEyebrow: 'ÖVRIGA LAG · SAMLINGEN',
     pageTitle: 'MoDo — Tröjsamlingen', metaDescription: 'Upptäck en privat samling matchanvända tröjor från MoDo Hockey. Se spelarna, säsongerna och alla detaljer i originaltröjorna.',
     home: 'Tröjsamlingens startsida', brand: 'TRÖJSAMLINGEN', collections: 'Samlingar', explore: 'Utforska samlingen', language: 'Språk',
     introEyebrow: 'FRÅN ISEN. TILL SAMLINGEN.', introDescription: 'Spelarna. Säsongerna. Tröjorna som var med.', logo: 'MoDo Hockeys logotyp', location: 'ÖRNSKÖLDSVIK, SVERIGE',
     carousel: 'bildspel', slide: 'bild', spotlight: 'I RAMPLJUSET', closerLook: 'En närmare titt på samlingen', heroLabel: 'Utvalda tröjor. Bläddra med vänster och höger piltangent.',
     loading: 'Laddar samlingen…', chooseJersey: 'Välj utvald tröja', pause: 'Pausa bildspelet', play: 'Starta bildspelet', previous: 'Föregående tröja', next: 'Nästa tröja',
     originals: 'Originaltröjor. Originalbilder. Varje detalj bevarad.', history: 'ETT STYCKE HOCKEYHISTORIA', collection: 'Samlingen', filterPlayers: 'Filtrera efter spelare',
-    allJerseys: 'Alla tröjor', morePlayers: 'Fler spelare', searchPlaceholder: 'Sök spelare eller säsong', empty: 'Inga tröjor matchar din sökning. Prova en annan spelare eller säsong.',
-    footerLove: 'En personlig samling. En gemensam kärlek till hockeyn.', backToTop: 'Till toppen', independent: 'En fristående samling utan koppling till MoDo Hockey.', closeDetails: 'Stäng tröjdetaljer',
+    allJerseys: 'Alla tröjor', morePlayers: 'Fler spelare', searchPlaceholder: 'Sök spelare, lag eller säsong', empty: 'Inga tröjor matchar din sökning. Prova en annan spelare eller säsong.',
+    footerLove: 'En personlig samling. En gemensam kärlek till hockeyn.', backToTop: 'Till toppen', independent: 'En fristående samling utan koppling till klubbarna.', closeDetails: 'Stäng tröjdetaljer',
     jersey: 'Tröja', homeJersey: 'Hemmatröja', awayJersey: 'Bortatröja', preseasonJersey: 'Försäsongströja', blueJersey: 'Blå tröja',
     slideLabel: '{index} av {total}: {name}', numberShort: 'Nr', viewJersey: 'Visa tröjan', viewPhoto: 'Visa bild', viewNamedPhoto: 'Visa {name}, bild {index}',
     jerseyPhoto: '{name}, MoDo {season}, tröja, bild {index}', showPlayer: 'Visa {name}, {season}', viewNamedJersey: 'Visa {name} {season}, nummer {number}',
-    jerseyAlt: '{name}, MoDo-tröja {season}', photos: '{count} bilder', shown: '{count} tröjor visas', count: '{jerseys} tröjor · {players} spelare',
+    jerseyAlt: '{name}, {team}-tröja {season}', photos: '{count} bilder', shown: '{count} tröjor visas', count: '{jerseys} tröjor · {players} spelare',
     openOriginalPhoto: 'Öppna originalbild {index} i en ny flik', fullPhoto: '{name} {season}, hela tröjan, bild {index}', photoOf: 'Bild {index} av {total}', openOriginal: 'Öppna original',
     detailEyebrow: 'MODO HOCKEY · SAMLINGEN', jerseyNumber: 'Tröjnummer', season: 'Säsong', unspecified: 'Ej angiven', team: 'Lag',
     detailFallback: 'En närmare titt på den här tröjan ur samlingen. Utforska originalbilderna för att se alla detaljer.', jumpPhotos: 'Gå till en tröjbild', jumpPhoto: 'Gå till bild {index}', photo: 'Bild {index}',
     loadError: 'Det gick inte att ladda samlingen. Uppdatera sidan och försök igen.'
   },
   en: {
+    otherTeams: 'Other teams', otherTitle: 'OTHER TEAMS', otherPageTitle: 'Other teams — The Jersey Collection', otherIntro: 'More teams. More players. The same love of hockey.', otherEyebrow: 'OTHER TEAMS · THE COLLECTION',
     pageTitle: 'MoDo — The Jersey Collection', metaDescription: 'Explore a personal collection of MoDo Hockey game-worn jerseys. Discover the players, the seasons and every detail of the original shirts.',
     home: 'The Jersey Collection home', brand: 'THE JERSEY COLLECTION', collections: 'Collections', explore: 'Explore the collection', language: 'Language',
     introEyebrow: 'FROM THE ICE. INTO THE COLLECTION.', introDescription: 'The players. The seasons. The shirts that were there.', logo: 'MoDo Hockey logo', location: 'ÖRNSKÖLDSVIK, SWEDEN',
     carousel: 'carousel', slide: 'slide', spotlight: 'IN THE SPOTLIGHT', closerLook: 'A closer look at the collection', heroLabel: 'Featured jerseys. Use left and right arrow keys to browse.',
     loading: 'Loading the collection…', chooseJersey: 'Choose featured jersey', pause: 'Pause automatic slideshow', play: 'Play automatic slideshow', previous: 'Previous jersey', next: 'Next jersey',
     originals: 'Original jerseys. Original photographs. Every detail preserved.', history: 'A PIECE OF HOCKEY HISTORY', collection: 'The collection', filterPlayers: 'Filter by player',
-    allJerseys: 'All jerseys', morePlayers: 'More players', searchPlaceholder: 'Find a player or season', empty: 'No jerseys match your search. Try another player or season.',
-    footerLove: 'A personal collection. A shared love of the game.', backToTop: 'Back to top', independent: 'Independent collector’s archive. Not affiliated with MoDo Hockey.', closeDetails: 'Close jersey details',
+    allJerseys: 'All jerseys', morePlayers: 'More players', searchPlaceholder: 'Find a player, team or season', empty: 'No jerseys match your search. Try another player or season.',
+    footerLove: 'A personal collection. A shared love of the game.', backToTop: 'Back to top', independent: 'Independent collector’s archive. Not affiliated with the clubs.', closeDetails: 'Close jersey details',
     jersey: 'Jersey', homeJersey: 'Home jersey', awayJersey: 'Away jersey', preseasonJersey: 'Preseason jersey', blueJersey: 'Blue jersey',
     slideLabel: '{index} of {total}: {name}', numberShort: 'No.', viewJersey: 'View the jersey', viewPhoto: 'View photo', viewNamedPhoto: 'View {name} photo {index}',
     jerseyPhoto: '{name} MoDo {season} jersey, photo {index}', showPlayer: 'Show {name}, {season}', viewNamedJersey: 'View {name} {season}, number {number}',
-    jerseyAlt: '{name} {season} MoDo jersey', photos: '{count} photos', shown: '{count} jerseys shown', count: '{jerseys} jerseys · {players} players',
+    jerseyAlt: '{name} {season}, {team} jersey', photos: '{count} photos', shown: '{count} jerseys shown', count: '{jerseys} jerseys · {players} players',
     openOriginalPhoto: 'Open original photo {index} in a new tab', fullPhoto: '{name} {season}, full jersey photo {index}', photoOf: 'Photo {index} of {total}', openOriginal: 'Open original',
     detailEyebrow: 'MODO HOCKEY · THE COLLECTION', jerseyNumber: 'Jersey number', season: 'Season', unspecified: 'Not specified', team: 'Team',
     detailFallback: 'A closer look at this jersey from the collection. Explore the original photographs to see every detail.', jumpPhotos: 'Jump to jersey photo', jumpPhoto: 'Jump to photo {index}', photo: 'Photo {index}',
@@ -54,7 +59,7 @@ let loadFailed = false;
 
 function applyLanguage() {
   document.documentElement.lang = language;
-  document.title = t('pageTitle');
+  document.title = t(activeCollection === 'other' ? 'otherPageTitle' : 'pageTitle');
   $('meta[name="description"]').content = t('metaDescription');
   document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
   for (const [data, attribute] of [['data-i18n-aria','aria-label'], ['data-i18n-alt','alt'], ['data-i18n-placeholder','placeholder'], ['data-i18n-role','aria-roledescription']]) {
@@ -63,7 +68,36 @@ function applyLanguage() {
   document.querySelectorAll('[data-language]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === language)));
   if (jerseys.length) { renderHero(); renderGrid(); }
   else if (loadFailed) $('#hero-slides').innerHTML = `<p class="loading">${translated('loadError')}</p>`;
+  updateCollectionLayout();
   syncPlayback();
+}
+
+function updateCollectionLayout() {
+  const other = activeCollection === 'other';
+  document.body.dataset.collection = activeCollection;
+  $('main').id = other ? 'other-teams' : 'modo';
+  $('#page-title').innerHTML = `${other ? translated('otherTitle') : 'MODO'}<span class="title-period">.</span>`;
+  $('.intro-description').textContent = t(other ? 'otherIntro' : 'introDescription');
+  $('.club-seal').hidden = other;
+  $('.featured-section').hidden = other;
+  document.querySelectorAll('a[data-collection]').forEach(tab => {
+    if(tab.dataset.collection === activeCollection) tab.setAttribute('aria-current','page');
+    else tab.removeAttribute('aria-current');
+  });
+  $('footer > a').href = other ? '#other-teams' : '#modo';
+}
+
+function selectCollection(collection) {
+  if(activeCollection === collection) return;
+  activeCollection = collection;
+  filter = 'all';
+  $('#search').value = '';
+  document.querySelectorAll('[data-filter]').forEach(button => {
+    const active = button.dataset.filter === 'all';
+    button.classList.toggle('active',active);
+    button.setAttribute('aria-pressed',String(active));
+  });
+  applyLanguage();
 }
 
 function summary(jersey) {
@@ -92,7 +126,7 @@ function moveTo(index, manual = false) {
 
 function syncPlayback() {
   clearInterval(timer);
-  const shouldPlay = !paused && !hovering && !focusWithin && !document.hidden && !dialog.open;
+  const shouldPlay = activeCollection === 'modo' && !paused && !hovering && !focusWithin && !document.hidden && !dialog.open;
   if(shouldPlay && featured.length > 1) timer = setInterval(() => moveTo(currentSlide+1),6500);
   $('#autoplay').setAttribute('aria-label',t(paused?'play':'pause'));
   $('#autoplay').innerHTML = `<span aria-hidden="true">${paused?'▷':'Ⅱ'}</span>`;
@@ -100,19 +134,20 @@ function syncPlayback() {
 
 function renderGrid() {
   const search = $('#search').value.toLocaleLowerCase().trim();
-  const visible = jerseys.filter(j => {
+  const collectionJerseys = jerseys.filter(j => collectionOf(j) === activeCollection);
+  const visible = collectionJerseys.filter(j => {
     const match = filter === 'all' || (filter === 'other' ? !/Forsberg|Näslund/.test(j.name) : j.name.includes(filter));
-    return match && `${j.name} ${j.number} ${j.season} ${j.kind} ${kindText(j)}`.toLocaleLowerCase().includes(search);
+    return match && `${j.name} ${j.number} ${j.season} ${j.kind} ${kindText(j)} ${teamName(j)}`.toLocaleLowerCase().includes(search);
   });
-  $('#jersey-grid').innerHTML = visible.map(j => `<article class="jersey-card"><button type="button" data-open="${j.id}" aria-label="${translated('viewNamedJersey',{name:j.name,season:j.season,number:j.number})}"><div class="card-photo"><img src="${imageURL(j.images[0])}" alt="${translated('jerseyAlt',{name:j.name,season:j.season})}" loading="lazy" decoding="async"><span class="card-number">#${j.number}</span><span class="photo-count">${translated('photos',{count:j.images.length})}</span></div><div class="card-meta"><span>${escapeHTML(j.season || 'MoDo Hockey')}</span><span>${escapeHTML(kindText(j))}</span></div><div class="card-footer"><h3>${escapeHTML(j.name)}</h3><span class="card-view">${translated('viewJersey')}</span></div></button></article>`).join('');
+  $('#jersey-grid').innerHTML = visible.map(j => `<article class="jersey-card"><button type="button" data-open="${j.id}" aria-label="${translated('viewNamedJersey',{name:j.name,season:j.season,number:j.number})}"><div class="card-photo"><img src="${imageURL(j.images[0])}" alt="${translated('jerseyAlt',{name:j.name,season:j.season,team:teamName(j)})}" loading="lazy" decoding="async"><span class="card-number">#${j.number}</span><span class="photo-count">${translated('photos',{count:j.images.length})}</span></div><div class="card-meta"><span>${escapeHTML(j.season || t('unspecified'))}</span><span>${escapeHTML(activeCollection === 'other' ? teamName(j) : kindText(j))}</span></div><div class="card-footer"><h3>${escapeHTML(j.name)}</h3><span class="card-view">${translated('viewJersey')}</span></div></button></article>`).join('');
   $('#empty-results').hidden = visible.length !== 0;
   $('#result-status').textContent = t('shown',{count:visible.length});
-  $('#collection-count').textContent = t('count',{jerseys:jerseys.length,players:new Set(jerseys.map(j=>j.name)).size});
+  $('#collection-count').textContent = t('count',{jerseys:collectionJerseys.length,players:new Set(collectionJerseys.map(j=>j.name)).size});
 }
 
 function openJersey(id, photo = 0) {
   const j = jerseys.find(j => j.id === id); if(!j) return;
-  $('#detail-content').innerHTML = `<div class="detail-layout"><div class="detail-photos">${j.images.map((path,i) => `<a id="detail-photo-${i}" href="${imageURL(path)}" target="_blank" rel="noopener" aria-label="${translated('openOriginalPhoto',{index:i+1})}"><img src="${imageURL(path)}" alt="${translated('fullPhoto',{name:j.name,season:j.season,index:i+1})}"><span>${translated('photoOf',{index:i+1,total:j.images.length})} · ${translated('openOriginal')}</span></a>`).join('')}</div><div class="detail-info"><p class="eyebrow">${translated('detailEyebrow')}</p><h2 id="detail-title">${escapeHTML(j.name)}</h2><dl class="detail-facts"><div><dt>${translated('jerseyNumber')}</dt><dd>#${j.number}</dd></div><div><dt>${translated('season')}</dt><dd>${escapeHTML(j.season || t('unspecified'))}</dd></div><div><dt>${translated('team')}</dt><dd>MoDo Hockey</dd></div><div><dt>${translated('jersey')}</dt><dd>${escapeHTML(kindText(j))}</dd></div></dl>${j.description ? `<p class="detail-description">${escapeHTML(j.description)}</p>` : `<p class="detail-muted">${translated('detailFallback')}</p>`}<div class="detail-thumbnails" aria-label="${translated('jumpPhotos')}">${j.images.map((path,i) => `<button type="button" data-detail-photo="${i}" aria-label="${translated('jumpPhoto',{index:i+1})}"><img src="${imageURL(path)}" alt="${translated('photo',{index:i+1})}"></button>`).join('')}</div></div></div>`;
+  $('#detail-content').innerHTML = `<div class="detail-layout"><div class="detail-photos">${j.images.map((path,i) => `<a id="detail-photo-${i}" href="${imageURL(path)}" target="_blank" rel="noopener" aria-label="${translated('openOriginalPhoto',{index:i+1})}"><img src="${imageURL(path)}" alt="${translated('fullPhoto',{name:j.name,season:j.season,index:i+1})}"><span>${translated('photoOf',{index:i+1,total:j.images.length})} · ${translated('openOriginal')}</span></a>`).join('')}</div><div class="detail-info"><p class="eyebrow">${translated(collectionOf(j) === 'other' ? 'otherEyebrow' : 'detailEyebrow')}</p><h2 id="detail-title">${escapeHTML(j.name)}</h2><dl class="detail-facts"><div><dt>${translated('jerseyNumber')}</dt><dd>#${j.number}</dd></div><div><dt>${translated('season')}</dt><dd>${escapeHTML(j.season || t('unspecified'))}</dd></div><div><dt>${translated('team')}</dt><dd>${escapeHTML(teamName(j))}</dd></div><div><dt>${translated('jersey')}</dt><dd>${escapeHTML(kindText(j))}</dd></div></dl>${j.description ? `<p class="detail-description">${escapeHTML(j.description)}</p>` : `<p class="detail-muted">${translated('detailFallback')}</p>`}<div class="detail-thumbnails" aria-label="${translated('jumpPhotos')}">${j.images.map((path,i) => `<button type="button" data-detail-photo="${i}" aria-label="${translated('jumpPhoto',{index:i+1})}"><img src="${imageURL(path)}" alt="${translated('photo',{index:i+1})}"></button>`).join('')}</div></div></div>`;
   dialog.showModal(); dialog.scrollTop=0; syncPlayback();
   if(photo > 0) document.getElementById(`detail-photo-${photo}`).scrollIntoView({block:'start',behavior:'instant'});
 }
@@ -122,6 +157,19 @@ document.addEventListener('click', (e) => {
   if(opener) openJersey(opener.dataset.open,Number(opener.dataset.photo || 0));
   const thumbnail=e.target.closest('[data-detail-photo]');
   if(thumbnail) document.getElementById(`detail-photo-${thumbnail.dataset.detailPhoto}`).scrollIntoView({behavior:reducedMotion.matches?'instant':'smooth',block:'start'});
+});
+document.querySelectorAll('a[data-collection]').forEach(tab => tab.addEventListener('click', e => {
+  e.preventDefault();
+  if(location.hash !== tab.hash) history.pushState(null,'',tab.hash);
+  selectCollection(tab.dataset.collection);
+  window.scrollTo({top:0,behavior:'instant'});
+}));
+window.addEventListener('hashchange', () => {
+  if(location.hash === '#other-teams') selectCollection('other');
+  else if(location.hash === '#modo' || location.hash === '') selectCollection('modo');
+});
+$('.header-link').addEventListener('click', e => {
+  if(activeCollection === 'other') { e.preventDefault(); $('#collection').scrollIntoView({behavior:reducedMotion.matches?'instant':'smooth'}); }
 });
 $('#hero').addEventListener('click', e => { const button=e.target.closest('[data-slide]'); if(button) moveTo(Number(button.dataset.slide),true); });
 document.querySelectorAll('[data-language]').forEach(button => button.addEventListener('click', () => {
@@ -150,4 +198,4 @@ document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListen
 
 applyLanguage();
 
-fetch('collection.json').then(response=>{if(!response.ok)throw new Error('Unable to load collection');return response.json();}).then(data=>{jerseys=data;featured=jerseys.filter(j=>j.featured!==null).sort((a,b)=>a.featured-b.featured);renderHero();renderGrid();}).catch(()=>{loadFailed=true;$('#hero-slides').innerHTML=`<p class="loading">${translated('loadError')}</p>`;});
+fetch('collection.json', {cache:'no-cache'}).then(response=>{if(!response.ok)throw new Error('Unable to load collection');return response.json();}).then(data=>{jerseys=data;featured=jerseys.filter(j=>collectionOf(j)==='modo' && Number.isFinite(j.featured)).sort((a,b)=>a.featured-b.featured);renderHero();renderGrid();}).catch(()=>{loadFailed=true;$('#hero-slides').innerHTML=`<p class="loading">${translated('loadError')}</p>`;});
