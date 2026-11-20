@@ -19,7 +19,7 @@
 body[data-collection="other"] h1{font-size:clamp(56px,8vw,112px);letter-spacing:-1px}
 body[data-collection="other"] .intro{padding-bottom:32px}
 body[data-collection="other"] .collection-section{padding-top:0}
-body[data-collection="other"] [data-filter="Forsberg"],body[data-collection="other"] [data-filter="Näslund"],body[data-collection="other"] [data-filter="other"],body[data-collection="other"] .footer-brand img{display:none}
+body[data-collection="other"] [data-filter="Forsberg"],body[data-collection="other"] [data-filter="Näslund"],body[data-collection="other"] [data-filter="other"]{display:none}
 body[data-collection="other"] .card-meta{align-items:start;gap:8px}.card-meta span:last-child{text-align:right}
 @media(max-width:1100px){.site-header{gap:14px}.collection-tab{padding-inline:14px;font-size:13px}.wordmark{font-size:11px;letter-spacing:1px}.wordmark-icon{font-size:36px}}
 @media(max-width:760px){.site-header{display:grid;grid-template-columns:1fr auto;height:auto;padding:13px 20px 0;gap:7px 12px}.site-header nav{grid-column:1/-1;grid-row:2;justify-content:center;gap:8px}.collection-tab{min-height:48px;padding-inline:16px;font-size:13px}.header-actions{grid-column:2;grid-row:1}.wordmark{font-size:11px}.wordmark>span:last-child{max-width:150px}.wordmark-icon{font-size:32px}body[data-collection="other"] .intro{padding-block:30px}body[data-collection="other"] h1{font-size:64px}}
@@ -33,3 +33,8 @@ body[data-collection="other"]::before{opacity:1}
 body[data-collection="other"] .card-number,body[data-collection="other"] .photo-count{background:#141b2be8}
 body[data-collection="other"] .card-photo{background:#1f293b}
 body[data-collection="other"] .filter.active,body[data-collection="other"] .language-switch button[aria-pressed="true"]{color:#243041}
+
+/* Independent Gamewornjerseys identity shared by both collections. */
+.wordmark{gap:10px;letter-spacing:.2px;white-space:nowrap;font:700 27px/1 var(--display)}.wordmark .brand-mark{width:48px;height:48px;flex:none;object-fit:contain}.wordmark>span:last-child{max-width:none}.footer-brand{font:700 21px/1 var(--display);letter-spacing:.3px}.footer-brand img{width:32px;height:32px;object-fit:contain}.detail-header>span{font:700 20px/1 var(--display);letter-spacing:.4px}
+@media(max-width:1100px){.wordmark{font-size:23px;gap:8px}.wordmark .brand-mark{width:40px;height:40px}}
+@media(max-width:760px){.wordmark{font-size:24px}.wordmark .brand-mark{width:38px;height:38px}.footer-brand{font-size:20px}.detail-header>span{font-size:20px}}

@@ -1,4 +1,4 @@
-# The Jersey Collection
+# Gamewornjerseys
 
 A responsive, static gallery for the MoDo Hockey jersey collection. Includes an animated featured carousel, player and season search, filters, and accessible full-photo detail dialogs. Original photographs are displayed with rounded corners using CSS; the JPG files are unchanged.
 
@@ -31,6 +31,8 @@ Open http://localhost:4173. No JavaScript packages or build dependencies are req
 The workflow in `.github/workflows/pages.yml` builds and deploys the `dist/` folder on pushes to `main`. In the repository's **Settings → Pages**, select **GitHub Actions** as the source. Pages availability for private repositories depends on the GitHub account's plan; the workflow does not change repository visibility.
 
 ## Assets
+
+The Gamewornjerseys identity uses a custom ivory hockey jersey icon with a copper collector's tag, generated with the built-in image generation tool. The logo is `assets/gamewornjerseys-logo.png`; its generation and refinement prompts are saved in `assets/gamewornjerseys-logo-prompt.txt`. The SVG favicon places that same unmodified image on a dark tile for visibility in light and dark browser tabs. The site name stays Gamewornjerseys in both interface languages.
 
 The MoDo logo is served by [MoDo Hockey's official website](https://www.modohockey.se/) from its [Sportality logo asset](https://sportality.cdn.s8y.se/team-logos/modo1_modo.svg). Club trademarks belong to their owners. This is an independent collector's archive.
 

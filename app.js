@@ -11,9 +11,9 @@ const dialog = $('#jersey-dialog');
 
 const messages = {
   sv: {
-    otherTeams: 'Övriga lag', otherTitle: 'ÖVRIGA LAG', otherPageTitle: 'Övriga lag — Tröjsamlingen', otherIntro: 'Fler lag. Fler spelare. Samma passion för hockey.', otherEyebrow: 'ÖVRIGA LAG · SAMLINGEN',
-    pageTitle: 'MoDo — Tröjsamlingen', metaDescription: 'Upptäck en privat samling matchanvända tröjor från MoDo Hockey. Se spelarna, säsongerna och alla detaljer i originaltröjorna.',
-    home: 'Tröjsamlingens startsida', brand: 'TRÖJSAMLINGEN', collections: 'Samlingar', explore: 'Utforska samlingen', language: 'Språk',
+    otherTeams: 'Övriga lag', otherTitle: 'ÖVRIGA LAG', otherPageTitle: 'Gamewornjerseys — Övriga lag', otherIntro: 'Fler lag. Fler spelare. Samma passion för hockey.', otherEyebrow: 'ÖVRIGA LAG · SAMLINGEN',
+    pageTitle: 'Gamewornjerseys — MoDo', metaDescription: 'Gamewornjerseys – en privat samling matchanvända hockeytröjor från MoDo och andra lag. Utforska spelarna, säsongerna och originalbilderna.',
+    home: 'Gamewornjerseys – startsida', brand: 'Gamewornjerseys', collections: 'Samlingar', explore: 'Utforska samlingen', language: 'Språk',
     introEyebrow: 'FRÅN ISEN. TILL SAMLINGEN.', introDescription: 'Spelarna. Säsongerna. Tröjorna som var med.', logo: 'MoDo Hockeys logotyp', location: 'ÖRNSKÖLDSVIK, SVERIGE',
     carousel: 'bildspel', slide: 'bild', spotlight: 'I RAMPLJUSET', closerLook: 'En närmare titt på samlingen', heroLabel: 'Utvalda tröjor. Bläddra med vänster och höger piltangent.',
     loading: 'Laddar samlingen…', chooseJersey: 'Välj utvald tröja', pause: 'Pausa bildspelet', play: 'Starta bildspelet', previous: 'Föregående tröja', next: 'Nästa tröja',
@@ -30,9 +30,9 @@ const messages = {
     loadError: 'Det gick inte att ladda samlingen. Uppdatera sidan och försök igen.'
   },
   en: {
-    otherTeams: 'Other teams', otherTitle: 'OTHER TEAMS', otherPageTitle: 'Other teams — The Jersey Collection', otherIntro: 'More teams. More players. The same love of hockey.', otherEyebrow: 'OTHER TEAMS · THE COLLECTION',
-    pageTitle: 'MoDo — The Jersey Collection', metaDescription: 'Explore a personal collection of MoDo Hockey game-worn jerseys. Discover the players, the seasons and every detail of the original shirts.',
-    home: 'The Jersey Collection home', brand: 'THE JERSEY COLLECTION', collections: 'Collections', explore: 'Explore the collection', language: 'Language',
+    otherTeams: 'Other teams', otherTitle: 'OTHER TEAMS', otherPageTitle: 'Gamewornjerseys — Other teams', otherIntro: 'More teams. More players. The same love of hockey.', otherEyebrow: 'OTHER TEAMS · THE COLLECTION',
+    pageTitle: 'Gamewornjerseys — MoDo', metaDescription: 'Gamewornjerseys is a personal collection of game-worn hockey jerseys from MoDo and other teams. Explore the players, seasons and original photographs.',
+    home: 'Gamewornjerseys home', brand: 'Gamewornjerseys', collections: 'Collections', explore: 'Explore the collection', language: 'Language',
     introEyebrow: 'FROM THE ICE. INTO THE COLLECTION.', introDescription: 'The players. The seasons. The shirts that were there.', logo: 'MoDo Hockey logo', location: 'ÖRNSKÖLDSVIK, SWEDEN',
     carousel: 'carousel', slide: 'slide', spotlight: 'IN THE SPOTLIGHT', closerLook: 'A closer look at the collection', heroLabel: 'Featured jerseys. Use left and right arrow keys to browse.',
     loading: 'Loading the collection…', chooseJersey: 'Choose featured jersey', pause: 'Pause automatic slideshow', play: 'Play automatic slideshow', previous: 'Previous jersey', next: 'Next jersey',

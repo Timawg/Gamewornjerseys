@@ -4,15 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#652731">
-  <meta name="description" content="Upptäck en privat samling matchanvända tröjor från MoDo Hockey. Se spelarna, säsongerna och alla detaljer i originaltröjorna.">
-  <title>MoDo — Tröjsamlingen</title>
-  <link rel="icon" href="assets/modo-logo.svg" type="image/svg+xml">
+  <meta name="description" content="Gamewornjerseys – en privat samling matchanvända hockeytröjor från MoDo och andra lag. Utforska spelarna, säsongerna och originalbilderna.">
+  <title>Gamewornjerseys — MoDo</title>
+  <link rel="icon" href="assets/gamewornjerseys-favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/gamewornjerseys-logo.png">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="wordmark" href="./" aria-label="Tröjsamlingens startsida" data-i18n-aria="home"><span class="wordmark-icon" aria-hidden="true">✳</span><span data-i18n="brand">TRÖJSAMLINGEN</span></a>
+    <a class="wordmark" href="./" aria-label="Gamewornjerseys – startsida" data-i18n-aria="home"><img class="brand-mark" src="assets/gamewornjerseys-logo.png" alt="" width="48" height="48"><span data-i18n="brand">Gamewornjerseys</span></a>
     <nav aria-label="Samlingar" data-i18n-aria="collections"><a class="collection-tab" href="#modo" data-collection="modo" aria-current="page"><img src="assets/modo-logo.svg" alt="">MoDo Hockey</a><a class="collection-tab" href="#other-teams" data-collection="other" data-i18n="otherTeams">Övriga lag</a></nav>
     <div class="header-actions"><a class="header-link" href="#collection" data-i18n="explore">Utforska samlingen</a><div class="language-switch" role="group" aria-label="Språk" data-i18n-aria="language"><button type="button" data-language="sv" lang="sv" aria-label="Svenska" aria-pressed="true">SV</button><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button></div></div>
   </header>
@@ -36,8 +37,8 @@
       <p id="empty-results" class="empty-results" hidden data-i18n="empty">Inga tröjor matchar din sökning. Prova en annan spelare eller säsong.</p>
     </section>
   </main>
-  <footer class="content-width"><div class="footer-brand"><img src="assets/modo-logo.svg" alt=""><span data-i18n="brand">TRÖJSAMLINGEN</span></div><p data-i18n="footerLove">En personlig samling. En gemensam kärlek till hockeyn.</p><a href="#modo" data-i18n="backToTop">Till toppen</a><p class="footer-note" data-i18n="independent">En fristående samling utan koppling till MoDo Hockey.</p></footer>
-  <dialog id="jersey-dialog" aria-labelledby="detail-title"><div class="detail-header"><span data-i18n="brand">TRÖJSAMLINGEN</span><button id="close-dialog" class="icon-button" type="button" aria-label="Stäng tröjdetaljer" data-i18n-aria="closeDetails">×</button></div><div id="detail-content"></div></dialog>
+  <footer class="content-width"><div class="footer-brand"><img src="assets/gamewornjerseys-logo.png" alt="" width="32" height="32"><span data-i18n="brand">Gamewornjerseys</span></div><p data-i18n="footerLove">En personlig samling. En gemensam kärlek till hockeyn.</p><a href="#modo" data-i18n="backToTop">Till toppen</a><p class="footer-note" data-i18n="independent">En fristående samling utan koppling till MoDo Hockey.</p></footer>
+  <dialog id="jersey-dialog" aria-labelledby="detail-title"><div class="detail-header"><span data-i18n="brand">Gamewornjerseys</span><button id="close-dialog" class="icon-button" type="button" aria-label="Stäng tröjdetaljer" data-i18n-aria="closeDetails">×</button></div><div id="detail-content"></div></dialog>
   <noscript><p class="noscript">Aktivera JavaScript för att utforska tröjsamlingen.</p></noscript>
 </body>
 </html>
