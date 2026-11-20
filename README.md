@@ -2,6 +2,8 @@
 
 A responsive, static gallery for the MoDo Hockey jersey collection. Includes an animated featured carousel, player and season search, filters, and accessible full-photo detail dialogs. Original photographs are displayed with rounded corners using CSS; the JPG files are unchanged.
 
+Swedish is the default language. The SV/EN controls switch the interface, jersey types, image labels, and details between Swedish and English, and remember the visitor's choice. The background blends the club's red and green colours with a soft white gradient in the centre.
+
 ## Content
 
 - `MODO MAPP/` holds the 23 jerseys and their original photographs and text files.
