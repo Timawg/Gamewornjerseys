@@ -1,6 +1,6 @@
 # Gamewornjerseys
 
-A responsive, static gallery for the MoDo Hockey jersey collection. Includes an animated featured carousel, player and season search, filters, and accessible full-photo detail dialogs. Original photographs are displayed with rounded corners using CSS; the JPG files are unchanged.
+A responsive, static gallery for the MoDo Hockey jersey collection. Includes an animated featured carousel, player and season search, filters, and accessible full-photo detail dialogs. Original photographs are displayed with rounded corners using CSS; the first Sundström JPG has been rotated losslessly to correct its orientation.
 
 The **MoDo Hockey** tab is selected by default and includes the featured carousel. **Övriga lag / Other teams** contains a simple grid for 19 jerseys from other clubs, with player names, numbers, teams, search, and the same full-photo detail views. Open `#other-teams` to link directly to this collection.
 
@@ -9,9 +9,9 @@ Swedish is the default language. The SV/EN controls switch the interface, jersey
 ## Content
 
 - `MODO MAPP/` holds the 23 jerseys and their original photographs and text files.
-- `Övriga Lag/` holds the 19 jerseys and 39 original photographs imported from the separate collection.
+- `Övriga Lag/` holds the 19 jerseys and 38 original photographs imported from the separate collection.
 - `collection.json` contains names, numbers verified from the photographs, seasons, photo order, and featured-player order. `featured: null` leaves a jersey out of the carousel.
-- `MODO MAPP-2/` is currently an identical copy of `MODO MAPP/` and is excluded from the website build.
+- `MODO MAPP-2/` is an earlier copy of `MODO MAPP/` and is excluded from the website build.
 
 Entries with `collection: "other"` appear on the Other teams tab and use their `team` field. Entries without a collection or team retain the MoDo defaults. A `null` textFile is allowed when a jersey has no associated text file; set it to a file path when adding a description.
 

@@ -1,12 +1,14 @@
 const $ = (selector) => document.querySelector(selector);
 const escapeHTML = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const imageURL = (path) => path.split('/').map(encodeURIComponent).join('/');
+const imageVersions = new Map();
+const imageURL = (path) => {
+  const url = path.split('/').map(encodeURIComponent).join('/');
+  const version = imageVersions.get(path);
+  return version ? `${url}?v=${version}` : url;
+};
 
-// Correct the display orientation without changing original photographs.
 function jerseyImage(jersey, path, alt, attributes = '') {
-  const image = `<img src="${imageURL(path)}" alt="${escapeHTML(alt)}" ${attributes}>`;
-  const rotation = jersey.imageRotations?.[path];
-  return rotation === 90 ? `<span class="oriented-photo" style="--photo-rotation:90deg">${image}</span>` : image;
+  return `<img src="${imageURL(path)}" alt="${escapeHTML(alt)}" ${attributes}>`;
 }
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -208,4 +210,4 @@ applyLanguage();
 // Apply the initial collection theme before enabling tab-switch transitions.
 requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('theme-ready')));
 
-fetch('collection.json', {cache:'no-cache'}).then(response=>{if(!response.ok)throw new Error('Unable to load collection');return response.json();}).then(data=>{jerseys=data;featured=jerseys.filter(j=>collectionOf(j)==='modo' && Number.isFinite(j.featured)).sort((a,b)=>a.featured-b.featured);renderHero();renderGrid();}).catch(()=>{loadFailed=true;$('#hero-slides').innerHTML=`<p class="loading">${translated('loadError')}</p>`;});
+fetch('collection.json', {cache:'no-cache'}).then(response=>{if(!response.ok)throw new Error('Unable to load collection');return response.json();}).then(data=>{jerseys=data;imageVersions.clear();jerseys.forEach(j=>Object.entries(j.imageVersions || {}).forEach(([path,version])=>imageVersions.set(path,version)));featured=jerseys.filter(j=>collectionOf(j)==='modo' && Number.isFinite(j.featured)).sort((a,b)=>a.featured-b.featured);renderHero();renderGrid();}).catch(()=>{loadFailed=true;$('#hero-slides').innerHTML=`<p class="loading">${translated('loadError')}</p>`;});

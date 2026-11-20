@@ -6,6 +6,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'dist'
+# Rebuild from scratch so removed source photos cannot remain in the deployment.
+if OUT.exists():
+    shutil.rmtree(OUT)
 OUT.mkdir(exist_ok=True)
 for filename in ('index.html', 'styles.css', 'app.js'):
     shutil.copy2(ROOT / filename, OUT / filename)
@@ -21,10 +24,12 @@ for jersey in collection:
     text = (ROOT / jersey['textFile']).read_bytes() if jersey.get('textFile') else b''
     encoding = 'utf-16' if text.startswith((b'\xff\xfe', b'\xfe\xff')) else 'utf-8-sig'
     jersey['description'] = text.decode(encoding).strip()
+    jersey['imageVersions'] = {}
     for image in jersey['images']:
         target = OUT / image
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(ROOT / image, target)
+        jersey['imageVersions'][image] = hashlib.sha256(target.read_bytes()).hexdigest()[:12]
 (OUT / 'collection.json').write_text(json.dumps(collection, ensure_ascii=False))
 (OUT / '.nojekyll').touch()
 print(f'Built {len(collection)} jerseys and {sum(len(j["images"]) for j in collection)} original photos in {OUT}')
