@@ -1,0 +1,325 @@
+[
+  {
+    "id": "jersey-01",
+    "name": "Josh Dickinson",
+    "number": 23,
+    "season": "2023-24",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Josh Dickinson 2023-24",
+    "textFile": "MODO MAPP/Josh Dickinson 2023-24/Josh Dickinson 2023-24.txt",
+    "images": [
+      "MODO MAPP/Josh Dickinson 2023-24/Josh Dickinson 2023-24 _1_Untitled.jpg",
+      "MODO MAPP/Josh Dickinson 2023-24/Josh Dickinson 2023-24_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-02",
+    "name": "Lars Jansson",
+    "number": 6,
+    "season": "1996-97",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Lars Jansson 1996-97",
+    "textFile": "MODO MAPP/Lars Jansson 1996-97/Lars Jansson.txt",
+    "images": [
+      "MODO MAPP/Lars Jansson 1996-97/Lars Jansson MoDo 1996-97_1_Untitled.jpg",
+      "MODO MAPP/Lars Jansson 1996-97/Lars Jansson MoDo 1996-97_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-03",
+    "name": "Markus Näslund",
+    "number": 19,
+    "season": "2004-05",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Markus Näslund 2004-05",
+    "textFile": "MODO MAPP/Markus Näslund 2004-05/Markus Näslund 2004-05.txt",
+    "images": [
+      "MODO MAPP/Markus Näslund 2004-05/Markus Näslund lockoutsäsongen 2004-05_1_Untitled.jpg",
+      "MODO MAPP/Markus Näslund 2004-05/Markus Näslund lockoutsäsongen 2004_05_2_Untitled.jpg"
+    ],
+    "featured": 1
+  },
+  {
+    "id": "jersey-04",
+    "name": "Mattias Weinhandl",
+    "number": 13,
+    "season": "2000-01",
+    "kind": "Blue jersey",
+    "folder": "MODO MAPP/Mattias Weinhandl 2000-01 Hemmatröjan",
+    "textFile": "MODO MAPP/Mattias Weinhandl 2000-01 Hemmatröjan/Mattias Weinhandl.txt",
+    "images": [
+      "MODO MAPP/Mattias Weinhandl 2000-01 Hemmatröjan/Mattias Weinhandl MoDo 2000-01 Blå tröja_1_Untitled.jpg",
+      "MODO MAPP/Mattias Weinhandl 2000-01 Hemmatröjan/Mattias Weinhandl MoDo 2000-01_blå tröja_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-05",
+    "name": "Mattias Weinhandl",
+    "number": 13,
+    "season": "2004-05",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Mattias Weinhandl 2004-05",
+    "textFile": "MODO MAPP/Mattias Weinhandl 2004-05/Mattias Weinhandl.txt",
+    "images": [
+      "MODO MAPP/Mattias Weinhandl 2004-05/Mattias Weinhandl 2004_05_lockoutsäsongen_1_Untitled.jpg",
+      "MODO MAPP/Mattias Weinhandl 2004-05/Mattias Weinhandl 2004-05_2_IMG_0085.jpeg"
+    ],
+    "featured": 4
+  },
+  {
+    "id": "jersey-06",
+    "name": "Mattias Weinhandl",
+    "number": 13,
+    "season": "2000-01",
+    "kind": "Home jersey",
+    "folder": "MODO MAPP/Mattias Weinhandl Röd 2000-01",
+    "textFile": "MODO MAPP/Mattias Weinhandl Röd 2000-01/Mattias Weinhandl.txt",
+    "images": [
+      "MODO MAPP/Mattias Weinhandl Röd 2000-01/Mattias Weinhandl MoDo hemma 2000-01_1_Untitled.jpg",
+      "MODO MAPP/Mattias Weinhandl Röd 2000-01/Mattias Weinhandl hemma 2000-01_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-07",
+    "name": "Michael Hjälm",
+    "number": 16,
+    "season": "1982-83",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Michael Hjälm 1982-83",
+    "textFile": "MODO MAPP/Michael Hjälm 1982-83/Michael Hjälm 1982-83.txt",
+    "images": [
+      "MODO MAPP/Michael Hjälm 1982-83/Michael Hjälm_1982_83_1_Untitled.jpg",
+      "MODO MAPP/Michael Hjälm 1982-83/Michael Hjälm 1982_83_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-08",
+    "name": "Michal Zajkowski",
+    "number": 30,
+    "season": "2005-06",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Michal Zajkowski 2005-06",
+    "textFile": "MODO MAPP/Michal Zajkowski 2005-06/Michal Zajkowski.txt",
+    "images": [
+      "MODO MAPP/Michal Zajkowski 2005-06/Michal Zajkowski MoDo 2005-06_1_Untitled.jpg",
+      "MODO MAPP/Michal Zajkowski 2005-06/Michal Zajkowski MoDo 2005-06_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-09",
+    "name": "Niklas Sundström",
+    "number": 24,
+    "season": "2007-08",
+    "kind": "Preseason jersey",
+    "folder": "MODO MAPP/Niklas Sundström Försäsongströja 2007-08",
+    "textFile": "MODO MAPP/Niklas Sundström Försäsongströja 2007-08/Niklas Sundström 2007-08.txt",
+    "images": [
+      "MODO MAPP/Niklas Sundström Försäsongströja 2007-08/Niklas Sundström Svart tröja försäsong_1_Untitled.jpg",
+      "MODO MAPP/Niklas Sundström Försäsongströja 2007-08/Niklas sundström svart tröja försäsong_2_Untitled.jpg"
+    ],
+    "featured": 2
+  },
+  {
+    "id": "jersey-10",
+    "name": "Per Lundkvist",
+    "number": 8,
+    "season": "1979-80",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Per Lundkvist",
+    "textFile": "MODO MAPP/Per Lundkvist/Pelle Lundqvist 1979-80.txt",
+    "images": [
+      "MODO MAPP/Per Lundkvist/Pelle Lundqvist 1979_80_1_Untitled.jpg",
+      "MODO MAPP/Per Lundkvist/Pelle Lundqvist 1979_80_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-11",
+    "name": "Peter Forsberg",
+    "number": 21,
+    "season": "1993-94",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Peter Forsberg 1993-94",
+    "textFile": "MODO MAPP/Peter Forsberg 1993-94/Peter Forsberg 1993-94.txt",
+    "images": [
+      "MODO MAPP/Peter Forsberg 1993-94/Peter Forsberg 1993_94_1_Untitled.jpg",
+      "MODO MAPP/Peter Forsberg 1993-94/Foppa 1993_94_3_Untitled.jpg",
+      "MODO MAPP/Peter Forsberg 1993-94/Peter Forsberg 1993_94_2_Untitled.jpg"
+    ],
+    "featured": 0
+  },
+  {
+    "id": "jersey-12",
+    "name": "Peter Forsberg",
+    "number": 21,
+    "season": "2009-10",
+    "kind": "Away jersey",
+    "folder": "MODO MAPP/Peter Forsberg Bortatröjan 2009-10",
+    "textFile": "MODO MAPP/Peter Forsberg Bortatröjan 2009-10/Peter Forsberg 2009-10.txt",
+    "images": [
+      "MODO MAPP/Peter Forsberg Bortatröjan 2009-10/Peter Forsberg bortatröjan 2009_10_1_Untitled.jpg",
+      "MODO MAPP/Peter Forsberg Bortatröjan 2009-10/Peter Forsberg bortatröjan 2009_10_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-13",
+    "name": "Peter Forsberg",
+    "number": 21,
+    "season": "1990-91",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Peter Forsberg MoDo 1990-91",
+    "textFile": "MODO MAPP/Peter Forsberg MoDo 1990-91/Peter Forsberg 1990-91.txt",
+    "images": [
+      "MODO MAPP/Peter Forsberg MoDo 1990-91/Peter Forsberg MoDo 1990-91_1_Untitled.jpg",
+      "MODO MAPP/Peter Forsberg MoDo 1990-91/Peter Forsberg MoDo 1990-91_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-14",
+    "name": "Peter Forsberg",
+    "number": 21,
+    "season": "2004-05",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Peter Forsberg MoDo 2004-05",
+    "textFile": "MODO MAPP/Peter Forsberg MoDo 2004-05/Peter Forsberg.txt",
+    "images": [
+      "MODO MAPP/Peter Forsberg MoDo 2004-05/Peter Forsberg MoDo 2004-05_1_Untitled.jpg",
+      "MODO MAPP/Peter Forsberg MoDo 2004-05/Peter Forsberg MoDo 2004-05_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-15",
+    "name": "Peter Forsberg",
+    "number": 21,
+    "season": "2009-10",
+    "kind": "Home jersey",
+    "folder": "MODO MAPP/Peter Forsberg hemmatröjan 2009-10",
+    "textFile": "MODO MAPP/Peter Forsberg hemmatröjan 2009-10/Peter Forsberg 2009-10.txt",
+    "images": [
+      "MODO MAPP/Peter Forsberg hemmatröjan 2009-10/Peter Forsberg 2009_10_hemmatröjan_1_Untitled.jpg",
+      "MODO MAPP/Peter Forsberg hemmatröjan 2009-10/Peter Forsberg 2009_10_hemmatröjan_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-16",
+    "name": "Peter Holmkvist",
+    "number": 1,
+    "season": "",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Peter Holmkvist",
+    "textFile": "MODO MAPP/Peter Holmkvist/Peter Holmkvist.txt",
+    "images": [
+      "MODO MAPP/Peter Holmkvist/Peter holmkvist _1_Untitled.jpg",
+      "MODO MAPP/Peter Holmkvist/Peter Holmkvist_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-17",
+    "name": "Sune Ödling",
+    "number": 24,
+    "season": "1974-76",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Sune Ödling",
+    "textFile": "MODO MAPP/Sune Ödling/Sune Ödling.txt",
+    "images": [
+      "MODO MAPP/Sune Ödling/Sune Ödling MoDo 1974_75_samt 1975_76_1_Untitled.jpg",
+      "MODO MAPP/Sune Ödling/Sune Ödling 1974_75_samt 1975_76_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-18",
+    "name": "Tobias Enström",
+    "number": 6,
+    "season": "2005-06",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Tobias Enström 2005-06",
+    "textFile": "MODO MAPP/Tobias Enström 2005-06/Tobias Enström 2005-06.txt",
+    "images": [
+      "MODO MAPP/Tobias Enström 2005-06/Tobias Enström 2005_06_1_Untitled.jpg",
+      "MODO MAPP/Tobias Enström 2005-06/Tobias Enström 2005_06_2_Untitled.jpg"
+    ],
+    "featured": 3
+  },
+  {
+    "id": "jersey-19",
+    "name": "Tomas Nänzen",
+    "number": 27,
+    "season": "1993-94",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Tomas Nänzen",
+    "textFile": "MODO MAPP/Tomas Nänzen/Tomas Nänzen.txt",
+    "images": [
+      "MODO MAPP/Tomas Nänzen/Tomas Nänzen MoDo höstesäsongen 1993-94_1_Untitled.jpg",
+      "MODO MAPP/Tomas Nänzen/Tomas Nänzen MoDo Höstsäsongen 1993-94_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-20",
+    "name": "Tommy Salo",
+    "number": 35,
+    "season": "",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Tommy Salo",
+    "textFile": "MODO MAPP/Tommy Salo/Tommy Salo.txt",
+    "images": [
+      "MODO MAPP/Tommy Salo/Tommy Salo_1_Untitled.jpg",
+      "MODO MAPP/Tommy Salo/Tommy Salo_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-21",
+    "name": "Tommy Själin",
+    "number": 10,
+    "season": "1974-76",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Tommy Själin",
+    "textFile": "MODO MAPP/Tommy Själin/Tommy Själin.txt",
+    "images": [
+      "MODO MAPP/Tommy Själin/Tommy Själin 1974_75_samt 1975_76_1_Untitled.jpg",
+      "MODO MAPP/Tommy Själin/Tommy Själin 1974_75_samt_1975_76_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-22",
+    "name": "Tommy Själin",
+    "number": 10,
+    "season": "1983-84",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Tommy Själin 1983-84",
+    "textFile": "MODO MAPP/Tommy Själin 1983-84/Tommy Själin.txt",
+    "images": [
+      "MODO MAPP/Tommy Själin 1983-84/Tommy Själin 1983_84_1_Untitled.jpg",
+      "MODO MAPP/Tommy Själin 1983-84/Tommy Själin 1983_84_2_Untitled.jpg"
+    ],
+    "featured": null
+  },
+  {
+    "id": "jersey-23",
+    "name": "Ulf “Lillis” Hansson",
+    "number": 7,
+    "season": "1979-80",
+    "kind": "Jersey",
+    "folder": "MODO MAPP/Ulf Lillis Hansson 1979-80",
+    "textFile": "MODO MAPP/Ulf Lillis Hansson 1979-80/Ulf Lillis Hansson 1979-80.txt",
+    "images": [
+      "MODO MAPP/Ulf Lillis Hansson 1979-80/Ulf Lillis Hansson MoDo 1979-80_1_Untitled.jpg",
+      "MODO MAPP/Ulf Lillis Hansson 1979-80/Ulf Lilliis Hansson MoDo 1979-80_2_Untitled.jpg"
+    ],
+    "featured": null
+  }
+]
