@@ -123,7 +123,10 @@
       "MODO MAPP/Niklas Sundström Försäsongströja 2007-08/Niklas Sundström Svart tröja försäsong_1_Untitled.jpg",
       "MODO MAPP/Niklas Sundström Försäsongströja 2007-08/Niklas sundström svart tröja försäsong_2_Untitled.jpg"
     ],
-    "featured": 2
+    "featured": 2,
+    "imageRotations": {
+      "MODO MAPP/Niklas Sundström Försäsongströja 2007-08/Niklas Sundström Svart tröja försäsong_1_Untitled.jpg": 90
+    }
   },
   {
     "id": "jersey-10",
