@@ -153,11 +153,12 @@ function compareSeasons(a, b, order) {
 }
 
 function renderGrid() {
-  const search = $('#search').value.toLocaleLowerCase().trim();
+  const searchTerms = $('#search').value.toLocaleLowerCase().trim().split(/\s+/);
   const collectionJerseys = jerseys.filter(j => collectionOf(j) === activeCollection);
   const visible = collectionJerseys.filter(j => {
     const match = filter === 'all' || (filter === 'other' ? !/Forsberg|Näslund/.test(j.name) : j.name.includes(filter));
-    return match && `${j.name} ${j.number} ${j.season} ${j.kind} ${kindText(j)} ${teamName(j)}`.toLocaleLowerCase().includes(search);
+    const searchText = `${j.name} ${j.number} ${j.season} ${j.kind} ${kindText(j)} ${teamName(j)}`.toLocaleLowerCase();
+    return match && searchTerms.every(term => searchText.includes(term));
   }).sort((a, b) => compareSeasons(a, b, $('#sort-order').value));
   $('#jersey-grid').innerHTML = visible.map(j => `<article class="jersey-card"><button type="button" data-open="${j.id}" aria-label="${translated('viewNamedJersey',{name:j.name,season:j.season,number:j.number})}"><div class="card-photo">${jerseyImage(j,j.images[0],t('jerseyAlt',{name:j.name,season:j.season,team:teamName(j)}),'loading="lazy" decoding="async"')}<span class="card-number">#${j.number}</span><span class="photo-count">${translated('photos',{count:j.images.length})}</span></div><div class="card-meta"><span>${escapeHTML(j.season || t('unspecified'))}</span><span>${escapeHTML(activeCollection === 'other' ? teamName(j) : kindText(j))}</span></div><div class="card-footer"><h3>${escapeHTML(j.name)}</h3><span class="card-view">${translated('viewJersey')}</span></div></button></article>`).join('');
   $('#empty-results').hidden = visible.length !== 0;
