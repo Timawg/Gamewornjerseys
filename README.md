@@ -4,6 +4,8 @@ A responsive, static gallery for the MoDo Hockey jersey collection. Includes an 
 
 The **MoDo Hockey** tab is selected by default and includes the featured carousel. **Övriga lag / Other teams** contains a simple grid for 19 jerseys from other clubs, with player names, numbers, teams, search, and the same full-photo detail views. Open `#other-teams` to link directly to this collection.
 
+Both grids default to newest season first. The **Sortera / Sort by** control switches between newest and oldest first, including when searching or filtering by player. Sorting uses the season's starting year and always places undated jerseys last. The featured carousel retains its curated order.
+
 Swedish is the default language. The SV/EN controls switch the interface, jersey types, image labels, and details between Swedish and English, and remember the visitor's choice. The background blends the club's red and green colours with a soft white gradient in the centre.
 
 ## Content

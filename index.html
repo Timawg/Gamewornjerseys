@@ -32,7 +32,13 @@
     </section>
     <section id="collection" class="collection-section content-width" aria-labelledby="collection-title">
       <div class="collection-heading"><div><p class="eyebrow" data-i18n="history">ETT STYCKE HOCKEYHISTORIA</p><h2 id="collection-title"><span data-i18n="collection">Samlingen</span><span class="title-period">.</span></h2></div><p id="collection-count" class="collection-count"></p></div>
-      <div class="collection-toolbar"><div class="filters" role="group" aria-label="Filtrera efter spelare" data-i18n-aria="filterPlayers"><button class="filter active" type="button" data-filter="all" aria-pressed="true" data-i18n="allJerseys">Alla tröjor</button><button class="filter" type="button" data-filter="Forsberg" aria-pressed="false">Forsberg</button><button class="filter" type="button" data-filter="Näslund" aria-pressed="false">Näslund</button><button class="filter" type="button" data-filter="other" aria-pressed="false" data-i18n="morePlayers">Fler spelare</button></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Sök spelare eller säsong" data-i18n-placeholder="searchPlaceholder" aria-label="Sök spelare eller säsong" data-i18n-aria="searchPlaceholder"></label></div>
+      <div class="collection-toolbar">
+        <div class="filters" role="group" aria-label="Filtrera efter spelare" data-i18n-aria="filterPlayers"><button class="filter active" type="button" data-filter="all" aria-pressed="true" data-i18n="allJerseys">Alla tröjor</button><button class="filter" type="button" data-filter="Forsberg" aria-pressed="false">Forsberg</button><button class="filter" type="button" data-filter="Näslund" aria-pressed="false">Näslund</button><button class="filter" type="button" data-filter="other" aria-pressed="false" data-i18n="morePlayers">Fler spelare</button></div>
+        <div class="collection-controls">
+          <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Sök spelare eller säsong" data-i18n-placeholder="searchPlaceholder" aria-label="Sök spelare eller säsong" data-i18n-aria="searchPlaceholder"></label>
+          <label class="sort-control" for="sort-order"><span data-i18n="sortBy">Sortera</span><select id="sort-order"><option value="newest" selected data-i18n="newestFirst">Nyast först</option><option value="oldest" data-i18n="oldestFirst">Äldst först</option></select></label>
+        </div>
+      </div>
       <p id="result-status" class="sr-only" role="status"></p><div id="jersey-grid" class="jersey-grid"></div>
       <p id="empty-results" class="empty-results" hidden data-i18n="empty">Inga tröjor matchar din sökning. Prova en annan spelare eller säsong.</p>
     </section>

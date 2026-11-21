@@ -28,7 +28,7 @@ const messages = {
     carousel: 'bildspel', slide: 'bild', spotlight: 'I RAMPLJUSET', closerLook: 'En närmare titt på samlingen', heroLabel: 'Utvalda tröjor. Bläddra med vänster och höger piltangent.',
     loading: 'Laddar samlingen…', chooseJersey: 'Välj utvald tröja', pause: 'Pausa bildspelet', play: 'Starta bildspelet', previous: 'Föregående tröja', next: 'Nästa tröja',
     originals: 'Originaltröjor. Originalbilder. Varje detalj bevarad.', history: 'ETT STYCKE HOCKEYHISTORIA', collection: 'Samlingen', filterPlayers: 'Filtrera efter spelare',
-    allJerseys: 'Alla tröjor', morePlayers: 'Fler spelare', searchPlaceholder: 'Sök spelare, lag eller säsong', empty: 'Inga tröjor matchar din sökning. Prova en annan spelare eller säsong.',
+    allJerseys: 'Alla tröjor', morePlayers: 'Fler spelare', sortBy: 'Sortera', newestFirst: 'Nyast först', oldestFirst: 'Äldst först', searchPlaceholder: 'Sök spelare, lag eller säsong', empty: 'Inga tröjor matchar din sökning. Prova en annan spelare eller säsong.',
     contactMessage: 'Jag är på ständig jakt efter nya intressanta tröjor', contact: 'Kontakt', researchSources: 'Källor till historiken',
     footerLove: 'En personlig samling. En gemensam kärlek till hockeyn.', backToTop: 'Till toppen', independent: 'En fristående samling utan koppling till klubbarna.', closeDetails: 'Stäng tröjdetaljer',
     jersey: 'Tröja', homeJersey: 'Hemmatröja', awayJersey: 'Bortatröja', preseasonJersey: 'Försäsongströja', blueJersey: 'Blå tröja',
@@ -48,7 +48,7 @@ const messages = {
     carousel: 'carousel', slide: 'slide', spotlight: 'IN THE SPOTLIGHT', closerLook: 'A closer look at the collection', heroLabel: 'Featured jerseys. Use left and right arrow keys to browse.',
     loading: 'Loading the collection…', chooseJersey: 'Choose featured jersey', pause: 'Pause automatic slideshow', play: 'Play automatic slideshow', previous: 'Previous jersey', next: 'Next jersey',
     originals: 'Original jerseys. Original photographs. Every detail preserved.', history: 'A PIECE OF HOCKEY HISTORY', collection: 'The collection', filterPlayers: 'Filter by player',
-    allJerseys: 'All jerseys', morePlayers: 'More players', searchPlaceholder: 'Find a player, team or season', empty: 'No jerseys match your search. Try another player or season.',
+    allJerseys: 'All jerseys', morePlayers: 'More players', sortBy: 'Sort by', newestFirst: 'Newest first', oldestFirst: 'Oldest first', searchPlaceholder: 'Find a player, team or season', empty: 'No jerseys match your search. Try another player or season.',
     contactMessage: 'I’m always on the lookout for interesting new jerseys', contact: 'Contact', researchSources: 'Historical sources',
     footerLove: 'A personal collection. A shared love of the game.', backToTop: 'Back to top', independent: 'Independent collector’s archive. Not affiliated with the clubs.', closeDetails: 'Close jersey details',
     jersey: 'Jersey', homeJersey: 'Home jersey', awayJersey: 'Away jersey', preseasonJersey: 'Preseason jersey', blueJersey: 'Blue jersey',
@@ -144,13 +144,21 @@ function syncPlayback() {
   $('#autoplay').innerHTML = `<span aria-hidden="true">${paused?'▷':'Ⅱ'}</span>`;
 }
 
+function compareSeasons(a, b, order) {
+  // Use the season's starting year; undated jerseys stay last in both directions.
+  const aYear = Number.parseInt(a.season, 10), bYear = Number.parseInt(b.season, 10);
+  if (!Number.isFinite(aYear)) return Number.isFinite(bYear) ? 1 : 0;
+  if (!Number.isFinite(bYear)) return -1;
+  return order === 'oldest' ? aYear - bYear : bYear - aYear;
+}
+
 function renderGrid() {
   const search = $('#search').value.toLocaleLowerCase().trim();
   const collectionJerseys = jerseys.filter(j => collectionOf(j) === activeCollection);
   const visible = collectionJerseys.filter(j => {
     const match = filter === 'all' || (filter === 'other' ? !/Forsberg|Näslund/.test(j.name) : j.name.includes(filter));
     return match && `${j.name} ${j.number} ${j.season} ${j.kind} ${kindText(j)} ${teamName(j)}`.toLocaleLowerCase().includes(search);
-  });
+  }).sort((a, b) => compareSeasons(a, b, $('#sort-order').value));
   $('#jersey-grid').innerHTML = visible.map(j => `<article class="jersey-card"><button type="button" data-open="${j.id}" aria-label="${translated('viewNamedJersey',{name:j.name,season:j.season,number:j.number})}"><div class="card-photo">${jerseyImage(j,j.images[0],t('jerseyAlt',{name:j.name,season:j.season,team:teamName(j)}),'loading="lazy" decoding="async"')}<span class="card-number">#${j.number}</span><span class="photo-count">${translated('photos',{count:j.images.length})}</span></div><div class="card-meta"><span>${escapeHTML(j.season || t('unspecified'))}</span><span>${escapeHTML(activeCollection === 'other' ? teamName(j) : kindText(j))}</span></div><div class="card-footer"><h3>${escapeHTML(j.name)}</h3><span class="card-view">${translated('viewJersey')}</span></div></button></article>`).join('');
   $('#empty-results').hidden = visible.length !== 0;
   $('#result-status').textContent = t('shown',{count:visible.length});
@@ -211,6 +219,7 @@ $('#hero').addEventListener('touchend',e=>{if(!touchStart)return;const dx=e.chan
 document.addEventListener('visibilitychange',syncPlayback);
 reducedMotion.addEventListener('change',()=>{paused=reducedMotion.matches;syncPlayback();});
 $('#search').addEventListener('input',renderGrid);
+$('#sort-order').addEventListener('change',renderGrid);
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});renderGrid();}));
 
 applyLanguage();
