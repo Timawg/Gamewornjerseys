@@ -17,7 +17,7 @@ Swedish is the default language. The SV/EN controls switch the interface, jersey
 
 Entries with `collection: "other"` appear on the Other teams tab and use their `team` field. Entries without a collection or team retain the MoDo defaults. A `null` textFile is allowed when a jersey has no associated text file; set it to a file path when adding a description.
 
-Add the associated description to each jersey's existing `.txt` file. The next deployment reads that text and displays it in the carousel excerpt and full jersey view. Empty files use basic collection details without inventing a story. Both UTF-8 and UTF-16 text are supported. To add another jersey, add its folder and entry in `collection.json`.
+Add the Swedish description to each jersey's existing `.txt` file and its English translation under the matching jersey ID in `translations/en.json`. The next deployment includes both versions in the carousel excerpt and full jersey view. Empty files use basic collection details without inventing a story. Both UTF-8 and UTF-16 text are supported. To add another jersey, add its folder and entry in `collection.json`.
 
 ## Preview
 
@@ -30,9 +30,9 @@ Open http://localhost:4173. No JavaScript packages or build dependencies are req
 
 ### Jersey history and statistics
 
-The 42 Swedish descriptions are stored in each jersey's `.txt` file and included in normal builds. `research/sources.json` maps the jerseys to the sources shown beneath their detail text. Keep these references up to date when changing historical facts or statistics. Jersey detail links use `?jersey=jersey-11#modo` or `?jersey=other-16#other-teams`.
+The 42 Swedish descriptions are stored in each jersey's `.txt` file. `translations/en.json` contains all 42 English descriptions and English source-link labels. The build checks that every jersey and source has a non-empty English translation. `research/sources.json` maps the jerseys to the sources shown beneath their detail text. Update both languages and their references when changing historical facts or statistics. Jersey detail links use `?jersey=jersey-11#modo` or `?jersey=other-16#other-teams`.
 
-The research covers player history, season statistics, and historical context. Regular-season, playoff, and international statistics are distinguished. Uncertain dates remain explicit; season context does not establish that an individual jersey was worn in a particular match. The descriptions are Swedish; the existing SV/EN control translates the interface.
+The research covers player history, season statistics, and historical context. Regular-season, playoff, and international statistics are distinguished. Uncertain dates remain explicit; season context does not establish that an individual jersey was worn in a particular match. The SV/EN control switches the full descriptions, carousel excerpts, source-link labels and interface. Swedish remains the default, and the visitor’s language choice is remembered.
 
 The catalogue corrections are Per Lundqvist, Peter Holmqvist, and Thomas Berglund's number 18. `research/review-notes.json` preserves the research notes and unresolved provenance questions for maintenance. It is not copied into the deployed website.
 

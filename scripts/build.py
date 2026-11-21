@@ -22,15 +22,36 @@ for filename in ('styles.css', 'app.js'):
 shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
 collection = json.loads((ROOT / 'collection.json').read_text())
 research = json.loads((ROOT / 'research' / 'sources.json').read_text())
+english = json.loads((ROOT / 'translations' / 'en.json').read_text())
+if set(english['jerseys']) != {jersey['id'] for jersey in collection}:
+    raise ValueError('English descriptions must cover every jersey exactly once')
+if set(english['sourceTitles']) != set(research['sources']):
+    raise ValueError('English source labels must cover every historical source')
+for text in [*english['jerseys'].values(), *english['sourceTitles'].values()]:
+    if not isinstance(text, str) or not text.strip():
+        raise ValueError('English translations must not be empty')
 if set(research['jerseys']) - {jersey['id'] for jersey in collection}:
     raise ValueError('Historical sources reference an unknown jersey')
 for jersey in collection:
     text = (ROOT / jersey['textFile']).read_bytes() if jersey.get('textFile') else b''
     encoding = 'utf-16' if text.startswith((b'\xff\xfe', b'\xfe\xff')) else 'utf-8-sig'
     jersey['description'] = text.decode(encoding).strip()
+    jersey['descriptions'] = {
+        'sv': jersey['description'],
+        'en': english['jerseys'][jersey['id']].strip(),
+    }
     source_ids = research['jerseys'].get(jersey['id'], [])
     if source_ids:
-        jersey['researchSources'] = [research['sources'][key] for key in source_ids]
+        jersey['researchSources'] = [
+            {
+                **research['sources'][key],
+                'titles': {
+                    'sv': research['sources'][key]['title'],
+                    'en': english['sourceTitles'][key],
+                },
+            }
+            for key in source_ids
+        ]
         for source in jersey['researchSources']:
             url = urlsplit(source['url'])
             if url.scheme != 'https' or not url.netloc:

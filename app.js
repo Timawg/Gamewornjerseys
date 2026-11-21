@@ -66,6 +66,7 @@ try { if (localStorage.getItem('jersey-language') === 'en') language = 'en'; } c
 const t = (key, values = {}) => messages[language][key].replace(/\{(\w+)\}/g, (_, name) => String(values[name] ?? ''));
 const kindKeys = {'Jersey':'jersey', 'Home jersey':'homeJersey', 'Away jersey':'awayJersey', 'Preseason jersey':'preseasonJersey', 'Blue jersey':'blueJersey'};
 const kindText = (jersey) => t(kindKeys[jersey.kind] || 'jersey');
+const descriptionText = (jersey) => jersey.descriptions?.[language] ?? jersey.description ?? '';
 const translated = (key, values) => escapeHTML(t(key, values));
 let loadFailed = false;
 
@@ -80,6 +81,8 @@ function applyLanguage() {
   document.querySelectorAll('[data-language]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === language)));
   if (jerseys.length) { renderHero(); renderGrid(); }
   else if (loadFailed) $('#hero-slides').innerHTML = `<p class="loading">${translated('loadError')}</p>`;
+  const currentJersey = jerseys.find(jersey => jersey.id === dialog.dataset.jerseyId);
+  if (dialog.open && currentJersey) renderJerseyDetails(currentJersey);
   updateCollectionLayout();
   syncPlayback();
 }
@@ -113,7 +116,7 @@ function selectCollection(collection) {
 }
 
 function summary(jersey) {
-  return jersey.description || [jersey.name, jersey.season, kindText(jersey).toLocaleLowerCase(language), 'MoDo Hockey'].filter(Boolean).join(' · ');
+  return descriptionText(jersey) || [jersey.name, jersey.season, kindText(jersey).toLocaleLowerCase(language), 'MoDo Hockey'].filter(Boolean).join(' · ');
 }
 
 function renderHero() {
@@ -168,12 +171,18 @@ function renderGrid() {
 
 function researchDetails(jersey) {
   if (!jersey.researchSources?.length) return '';
-  return `<div class="detail-research"><h3>${translated('researchSources')}</h3><ul>${jersey.researchSources.map(source => `<li><a href="${escapeHTML(source.url)}" target="_blank" rel="noopener">${escapeHTML(source.title)}</a></li>`).join('')}</ul></div>`;
+  return `<div class="detail-research"><h3>${translated('researchSources')}</h3><ul>${jersey.researchSources.map(source => `<li><a href="${escapeHTML(source.url)}" target="_blank" rel="noopener">${escapeHTML(source.titles?.[language] ?? source.title)}</a></li>`).join('')}</ul></div>`;
+}
+
+function renderJerseyDetails(j) {
+  const description = descriptionText(j);
+  $('#detail-content').innerHTML = `<div class="detail-layout"><div class="detail-photos">${j.images.map((path,i) => `<a id="detail-photo-${i}" href="${imageURL(path)}" target="_blank" rel="noopener" aria-label="${translated('openOriginalPhoto',{index:i+1})}">${jerseyImage(j,path,t('fullPhoto',{name:j.name,season:j.season,index:i+1}))}<span>${translated('photoOf',{index:i+1,total:j.images.length})} · ${translated('openOriginal')}</span></a>`).join('')}</div><div class="detail-info"><p class="eyebrow">${translated(collectionOf(j) === 'other' ? 'otherEyebrow' : 'detailEyebrow')}</p><h2 id="detail-title">${escapeHTML(j.name)}</h2><dl class="detail-facts"><div><dt>${translated('jerseyNumber')}</dt><dd>#${j.number}</dd></div><div><dt>${translated('season')}</dt><dd>${escapeHTML(j.season || t('unspecified'))}</dd></div><div><dt>${translated('team')}</dt><dd>${escapeHTML(teamName(j))}</dd></div><div><dt>${translated('jersey')}</dt><dd>${escapeHTML(kindText(j))}</dd></div></dl>${description ? `<p class="detail-description">${escapeHTML(description)}</p>` : `<p class="detail-muted">${translated('detailFallback')}</p>`}${researchDetails(j)}<div class="detail-thumbnails" aria-label="${translated('jumpPhotos')}">${j.images.map((path,i) => `<button type="button" data-detail-photo="${i}" aria-label="${translated('jumpPhoto',{index:i+1})}">${jerseyImage(j,path,t('photo',{index:i+1}))}</button>`).join('')}</div></div></div>`;
 }
 
 function openJersey(id, photo = 0) {
   const j = jerseys.find(j => j.id === id); if(!j) return;
-  $('#detail-content').innerHTML = `<div class="detail-layout"><div class="detail-photos">${j.images.map((path,i) => `<a id="detail-photo-${i}" href="${imageURL(path)}" target="_blank" rel="noopener" aria-label="${translated('openOriginalPhoto',{index:i+1})}">${jerseyImage(j,path,t('fullPhoto',{name:j.name,season:j.season,index:i+1}))}<span>${translated('photoOf',{index:i+1,total:j.images.length})} · ${translated('openOriginal')}</span></a>`).join('')}</div><div class="detail-info"><p class="eyebrow">${translated(collectionOf(j) === 'other' ? 'otherEyebrow' : 'detailEyebrow')}</p><h2 id="detail-title">${escapeHTML(j.name)}</h2><dl class="detail-facts"><div><dt>${translated('jerseyNumber')}</dt><dd>#${j.number}</dd></div><div><dt>${translated('season')}</dt><dd>${escapeHTML(j.season || t('unspecified'))}</dd></div><div><dt>${translated('team')}</dt><dd>${escapeHTML(teamName(j))}</dd></div><div><dt>${translated('jersey')}</dt><dd>${escapeHTML(kindText(j))}</dd></div></dl>${j.description ? `<p class="detail-description">${escapeHTML(j.description)}</p>` : `<p class="detail-muted">${translated('detailFallback')}</p>`}${researchDetails(j)}<div class="detail-thumbnails" aria-label="${translated('jumpPhotos')}">${j.images.map((path,i) => `<button type="button" data-detail-photo="${i}" aria-label="${translated('jumpPhoto',{index:i+1})}">${jerseyImage(j,path,t('photo',{index:i+1}))}</button>`).join('')}</div></div></div>`;
+  dialog.dataset.jerseyId = id;
+  renderJerseyDetails(j);
   dialog.showModal(); dialog.scrollTop=0; syncPlayback();
   if(photo > 0) document.getElementById(`detail-photo-${photo}`).scrollIntoView({block:'start',behavior:'instant'});
 }
