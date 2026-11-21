@@ -1,0 +1,59 @@
+{
+  "researchedOn": "2026-11-21",
+  "scope": "42 svenska textutkast med fokus på spelarens säsong, statistik och historiska sammanhang. Grundserie, slutspel och landslag hålls isär. Källorna styrker inte att just dessa exemplar har använts i match eller i en viss final. Datering och spelarattribution följer samlingen där annat inte uttryckligen anges.",
+  "appliedCatalogueCorrections": {
+    "jersey-10": {
+      "name": "Per Lundqvist"
+    },
+    "jersey-16": {
+      "name": "Peter Holmqvist"
+    },
+    "other-16": {
+      "number": 18
+    }
+  },
+  "notes": {
+    "jersey-01": "Bröstmotivet avviker från klubbens vanliga matchställ. Exakt match, evenemang och eventuell specialutgåva behöver styrkas av ägaren; texten kallar den därför inte jubileums- eller specialmatchtröja.",
+    "jersey-02": "Säsongen följer samlingens märkning. Spelarens deltagande och statistik är kontrollerade, men det enskilda exemplarets matchanvändning är inte verifierad.",
+    "jersey-03": "Slitage på fotografiet beskrivs inte som bevis för en viss match eller för fotomatchning.",
+    "jersey-04": "Mappnamnet säger Hemmatröjan medan katalogen säger Blå tröja. Ingen egen bedömning av hemma-/bortaanvändning görs i utkastet.",
+    "jersey-05": "Datum och omständigheter för de synliga signeringarna är inte dokumenterade.",
+    "jersey-06": "Hemmabeteckningen är hämtad från samlingen.",
+    "jersey-07": "Spelarattributionen bygger på samlingen och säsongens spelaruppgifter; namn saknas på själva tröjan.",
+    "jersey-08": "Signeringens äkthet och tillkomst har inte kontrollerats.",
+    "jersey-09": "Försäsongsbeteckning och årtal kommer från mappen. Någon oberoende källa som knyter just den svarta modellen till försäsongen 2007/08 har inte hittats.",
+    "jersey-10": "Namnet har rättats från Per Lundkvist till Per Lundqvist, i enlighet med spelarregistret. Originalmapp och bildfiler har inte döpts om.",
+    "jersey-11": "Finalåret är verifierat; texten påstår inte att just detta exemplar bars under finalserien.",
+    "jersey-12": "Bortabeteckning och säsong följer samlingens märkning; ingen enskild match är verifierad.",
+    "jersey-13": "Dateringen kommer från samlingen. Spelarens säsongsuppgifter är verifierade separat och autentiserar inte exemplaret.",
+    "jersey-14": "Synlig signering har inte autentiserats.",
+    "jersey-15": "Hemmabeteckningen följer samlingen. OS-uppgiften gäller spelaren och säger inget om användningen av denna klubbtröja.",
+    "jersey-16": "Exakt säsong är okänd. Namnet har rättats från Holmkvist till Holmqvist, vilket stöds av samtida program och MoDos historik. Källorna daterar inte just denna tröja.",
+    "jersey-17": "Intervallet 1974–1976 är samlingens uppgift. Källorna stödjer spelaren och modellperioden, men inte att samma exemplar användes under båda säsongerna.",
+    "jersey-18": "Signeringen är synlig på bilden men inte autentiserad.",
+    "jersey-19": "Bildfilerna anger höstsäsongen 1993/94. Texten påstår därför inte finalanvändning. Namnet förekommer med olika stavningar i källorna; katalogens Tomas Nänzen behålls tills ägaren väljer form.",
+    "jersey-20": "Säsong saknas i samlingen. Salos tid i MoDo räcker inte för att datera exemplaret eller avgöra om det är en match-, tränings-, uppvisnings- eller annan specialtröja.",
+    "jersey-21": "Kontrollera intervallet 1974–1976. Lumberjacks dräkthistorik uppger att ryggnamnen försvann efter 1974/75; namnplaceringen är därför ett skäl att undersöka om just detta exemplar främst hör till 1974/75. Ingen ändring av säsongsfältet görs.",
+    "jersey-22": "Spelaruppgifter och nedflyttningen är verifierade i MoDos egen säsongshistorik.",
+    "jersey-23": "Historiska bilder stödjer spelaren och modellen, men ersätter inte fotomatchning av det enskilda exemplaret.",
+    "other-01": "Ingen koppling mellan just detta exemplar och Mora-matchen är verifierad; matchen används som säsongskontext.",
+    "other-02": "Intervallet betyder inte att det är verifierat att exemplaret användes båda säsongerna. Statistikdatabaserna skiljer sig åt om Stålnackes totalpoäng 1986/87; de totalsiffrorna används därför inte.",
+    "other-03": "Attributionen till Stålnacke kommer från samlingen; något namnfält som identifierar honom finns inte på tröjan.",
+    "other-04": "Detta är Luleåforwarden Jens Hellgren, inte den yngre backen med samma namn. Exakt säsong inom intervallet återstår att bekräfta.",
+    "other-05": "Mästarsäsongen är verifierad, men texten gör inget påstående om att exemplaret bars i final eller guldfirande.",
+    "other-06": "Mappen och katalogen anger 1983/84, medan båda bildfilerna anger 1982/83. Båda är möjliga utifrån spelarens karriär. Behåll osäkerheten tills etiketter, ägaruppgifter eller samtida modellbilder avgör frågan.",
+    "other-07": "Exakt säsong och bröstmotivets eventuella jubileumsanknytning är inte verifierade. Ett 1891-motiv räcker inte ensamt som bevis för en viss säsong.",
+    "other-08": "Datering enligt samlingen; inga uppgifter om specifika matcher eller tröjset finns.",
+    "other-09": "En ny beskrivningsfil har kopplats till posten, som tidigare saknade textfil i katalogen. Exakt säsong inom intervallet återstår att bekräfta.",
+    "other-10": "Filnamnen beskriver den som SM-guldtröja. Det är verifierat att Skellefteå vann 2026, men det finns ingen dokumenterad fotomatchning av just exemplaret i detta underlag. Ingen borttagen Bildbyrån-bild används eller återpubliceras.",
+    "other-11": "Säsongsuppgiften kommer från samlingen. Någon specifik match eller del av säsongens tröjset är inte fastställd.",
+    "other-12": "Historiken gäller säsongen och spelaren. Det finns inget underlag som placerar denna tröja i en viss finalmatch.",
+    "other-13": "Säsongen anges som 1993/94 i samlingen. Guldmeriten är verifierad, men inte att exemplaret bars i final eller guldfirande. Diakritisk namnform Švehla kan införas efter ägarens önskemål; trycket säger SVEHLA.",
+    "other-14": "Textfilen anger 2004/05 medan ett bildfilnamn har skrivfelet 2005_05. Katalogens 2004/05 behålls. Signering och exakt tröjset behöver separat dokumentation.",
+    "other-15": "1996 års guld används endast som spelarhistorik. Tröjan dateras inte till guldåret.",
+    "other-16": "Katalogens nummer har rättats från 10 till 18, vilket syns tydligt på tröjan och stöds av förbundets spelarlista. Exakt säsong behöver fortfarande ägarunderlag.",
+    "other-17": "Exakt säsong saknas. 2000/01 och 2001/02 är spelarens verifierade Brynäsperiod, inte en verifiering av när exemplaret tillverkades eller användes.",
+    "other-18": "Attributionen till Isaksson följer samlingen. Utan ryggnamn eller dokumenterad proveniens kan numret ensamt inte autentisera exemplaret.",
+    "other-19": "Spelare, nummer och säsongsdeltagande stöds av samtida program. Uppgifterna visar inte i vilka matcher just denna tröja användes."
+  }
+}

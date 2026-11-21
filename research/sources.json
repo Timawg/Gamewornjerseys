@@ -1,0 +1,496 @@
+{
+  "researchedOn": "2026-11-21",
+  "language": "sv",
+  "sources": {
+    "dickinson-captains": {
+      "title": "MoDo: Här är lagkaptenerna 2023–2024",
+      "url": "https://www.modohockey.se/article/v65arzk-4ij6i1/view"
+    },
+    "dickinson-season": {
+      "title": "MoDo: Nio spelare lämnar efter 2023/24",
+      "url": "https://www.modohockey.se/article/u8hasaq-4ij6i1/view"
+    },
+    "jansson": {
+      "title": "Elite Prospects: Lars Jansson, säsongsstatistik",
+      "url": "https://www.eliteprospects.com/player/221/lars-jansson"
+    },
+    "naslund": {
+      "title": "QuantHockey: Markus Näslund, 2004/05",
+      "url": "https://www.quanthockey.com/hockey-stats/en/profile.php?player=4293"
+    },
+    "modo-2000s": {
+      "title": "MoDo Hockey 100 år: 00-talet",
+      "url": "https://www.modohockey.se/article/naszakmp1-4ij6i1/modo-hockey-100-ar-00-talet"
+    },
+    "weinhandl-2000": {
+      "title": "Svenska Ishockeyförbundet: spelarstatistik 2000/01, MoDo på sidan 14",
+      "url": "https://historical.stats.swehockey.se/0001/pdf/Elitserien/Players.pdf#page=14"
+    },
+    "weinhandl-2004": {
+      "title": "Linköping HC: Weinhandl värvas, med återblick på 2004/05",
+      "url": "https://www.lhc.eu/article/x4mcainsn-30c01/view"
+    },
+    "weinhandl-career": {
+      "title": "Hockeysverige: Intervju med Mattias Weinhandl",
+      "url": "https://hockeysverige.se/intervju/en-karriar-som-tog-slut-for-tidigt-old-school-hockey-mattias-weinhandl/"
+    },
+    "hjalm": {
+      "title": "Elite Prospects: Michael Hjälm, 1982/83",
+      "url": "https://www.eliteprospects.com/player/1519/michael-hjalm"
+    },
+    "modo-2005": {
+      "title": "Elite Prospects: MoDos trupp 2005/06",
+      "url": "https://www.eliteprospects.com/team/9/modo-hockey/2005-2006"
+    },
+    "sundstrom": {
+      "title": "QuantHockey: MoDos grundseriestatistik 2007/08",
+      "url": "https://www.quanthockey.com/shl/en/teams/modo-hockey-players-2007-08-shl-stats.html"
+    },
+    "modo-gold-2007": {
+      "title": "SHL: MoDo tar SM-guld 2007",
+      "url": "https://www.shl.se/article/jadtainrx-403dd/"
+    },
+    "lundqvist": {
+      "title": "Elite Prospects: Per Lundqvist, 1979/80",
+      "url": "https://www.eliteprospects.com/player/1946/per-lundqvist"
+    },
+    "modo-1970s": {
+      "title": "MoDo Hockey 100 år: 70-talet",
+      "url": "https://www.modohockey.se/article/othrakmkq-4ij6i1/view"
+    },
+    "forsberg": {
+      "title": "Hockey Hall of Fame: Peter Forsberg, biografi och karriärstatistik",
+      "url": "https://legends.hhof.com/induction_archives/ind14Forsberg.shtml"
+    },
+    "modo-2004": {
+      "title": "Elite Prospects: MoDos grundseriestatistik 2004/05",
+      "url": "https://www.eliteprospects.com/team/9/modo-hockey/stats/2004-2005"
+    },
+    "holmqvist": {
+      "title": "MoDo: Historik, Elitserien 1977/78",
+      "url": "https://www.modohockey.se/article/ud9pains1-4ij6i1/view"
+    },
+    "holmqvist-program": {
+      "title": "Samtida matchprogram: Djurgården–MoDo, 24 november 1974",
+      "url": "https://difhistoria.se/media/matchprogram/matchprogram_ishockey_herr_1974-11-24_djurgardens_if-modo.pdf"
+    },
+    "odling": {
+      "title": "QuantHockey: Sune Ödling, säsongsstatistik",
+      "url": "https://www.quanthockey.com/hockey-stats/en/profile.php?player=11468"
+    },
+    "modo-shirts-1970": {
+      "title": "Lumberjacks: MoDos klubbmärken och dräkter 1964–1978",
+      "url": "https://lumberjacks.se/historik/mode-a-la-modo/1964-78/"
+    },
+    "modo-shirts-1980": {
+      "title": "Lumberjacks: MoDos klubbmärken och dräkter 1978–1987",
+      "url": "https://lumberjacks.se/historik/mode-a-la-modo/1978-87/"
+    },
+    "enstrom": {
+      "title": "Elite Prospects: Tobias Enström, säsongsstatistik",
+      "url": "https://www.eliteprospects.com/player/594/tobias-enstrom"
+    },
+    "modo-captains": {
+      "title": "MoDoiten 2018/19: lagkaptener, sidan 46",
+      "url": "https://cdn.ramses.nu/files/modo1_modo/MODOiten_1819.pdf"
+    },
+    "nanzen-program": {
+      "title": "Samtida matchprogram: Djurgården–MoDo, 14 november 1993",
+      "url": "https://difhistoria.se/wp-content/uploads/Matchprogram-Ishockey-Herr-1993-11-14-Djurgardens-IF-MoDo.pdf"
+    },
+    "salo": {
+      "title": "QuantHockey: MoDos målvaktsstatistik 2004/05",
+      "url": "https://www.quanthockey.com/shl/en/teams/modo-hockey-goalies-2004-05-shl-stats.html"
+    },
+    "sjalin-program": {
+      "title": "Samtida matchprogram: Djurgården–MoDo, 27 november 1975",
+      "url": "https://difhistoria.se/media/matchprogram/matchprogram_ishockey_herr_1975-11-27_djurgardens_if-modo_aik.pdf"
+    },
+    "modo-1983": {
+      "title": "MoDo: Historik, Elitserien 1983/84",
+      "url": "https://www.modohockey.se/article/tyhwains1-4ij6i1/view"
+    },
+    "hansson": {
+      "title": "QuantHockey: MoDos trupp 1979/80",
+      "url": "https://www.quanthockey.com/shl/en/team-rosters/modo-hockey-1979-80-shl-roster.html"
+    },
+    "shinnimin": {
+      "title": "Växjö Lakers: Shinnimin förlänger inför 2018/19",
+      "url": "https://www.vaxjolakers.se/article/5ttgajjlu-4af7d/view"
+    },
+    "shinnimin-hattrick": {
+      "title": "Växjö Lakers: Shinnimins hattrick mot Mora, 28 december 2018",
+      "url": "https://www.vaxjolakers.se/article/2dptajq8b-4af7d/view"
+    },
+    "stalnacke": {
+      "title": "QuantHockey: Erik Stålnacke, säsongsstatistik",
+      "url": "https://www.quanthockey.com/hockey-stats/en/profile.php?player=11054"
+    },
+    "lulea-hattricks": {
+      "title": "Luleå Hockey: historiska hattrickskyttar",
+      "url": "https://www.luleahockey.se/herr-hattrick-skyttar"
+    },
+    "hellgren": {
+      "title": "Luleå Hockey: Jens Hellgren uppmärksammas som LHF Hero",
+      "url": "https://www.luleahockey.se/article/q2eatmm-30c4d/view"
+    },
+    "akerman": {
+      "title": "HV71: Johan Åkerman lämnar efter SM-guldet 2008",
+      "url": "https://www.hv71.se/artikel/me3aainsn-3iaijd/johan-akerman-lamnar-hv71"
+    },
+    "forsman": {
+      "title": "Skellefteå AIK: Fuhrmans hörna, Johnny Forsman",
+      "url": "https://www.skellefteaaik.se/article/s0rlains3-5n5bi1/view"
+    },
+    "forsman-seasons": {
+      "title": "Eurohockey: Johnny Forsmans säsonger 1982/83 och 1983/84",
+      "url": "https://www.eurohockey.com/player/19306-johnny-forsman.html"
+    },
+    "boumedienne": {
+      "title": "Djurgården Hockey: intervju med Josef Boumedienne, juni 2010",
+      "url": "https://www.youtube.com/watch?v=HKtlhKpglmk"
+    },
+    "boumedienne-seasons": {
+      "title": "QuantHockey: Josef Boumediennes säsonger i Djurgården",
+      "url": "https://www.quanthockey.com/hockey-stats/fi/profile.php?player=568"
+    },
+    "nakyva": {
+      "title": "Linköping HC: spelarna som lämnar efter 2017/18",
+      "url": "https://www.lhc.eu/article/xyf3ajfs5-30c01/view"
+    },
+    "nakyva-roster": {
+      "title": "Linköping HC: laget inför hemmapremiären 2017/18",
+      "url": "https://www.lhc.eu/article/fpd8aj7un-30c01/view"
+    },
+    "hurtig": {
+      "title": "Hockeysverige: Intervju med Lars Hurtig om tiden i Luleå",
+      "url": "https://hockeysverige.se/intervju/kultspelaren-fran-pitea-old-school-hockey-lars-hurtig/"
+    },
+    "soderstrom": {
+      "title": "SHL: Linus Söderström, målvakt nummer 32",
+      "url": "https://www.shl.se/athlete-profile/qQ9-7c23jFVqI/?active-tab=gamelog"
+    },
+    "skelleftea-2026": {
+      "title": "SHL: Skellefteå bärgar sitt femte SM-guld, 2 maj 2026",
+      "url": "https://www.shl.se/article/3a2atef-403dd/view"
+    },
+    "ljungh": {
+      "title": "Linköping HC: Markus Ljungh värvas inför 2020/21",
+      "url": "https://www.lhc.eu/article/7lo2ak9ph-30c01/view"
+    },
+    "weinhandl-lhc": {
+      "title": "KHL: Weinhandls 35 mål och skytteligaseger 2007/08",
+      "url": "https://en.khl.ru/news/2019/03/06/434405.html"
+    },
+    "weinhandl-return": {
+      "title": "Linköping HC: återblick på Weinhandls säsong 2007/08",
+      "url": "https://www.lhc.eu/article/nsyhainsi-30c01/view"
+    },
+    "svehla": {
+      "title": "Malmö Redhawks: Walk of Fame, Robert Svehla",
+      "url": "https://www.malmoredhawks.com/article/h5v4aj8sn-33nad/view"
+    },
+    "akerstrom": {
+      "title": "Luleå Hockey: Roger Åkerströms nummer 28 pensioneras",
+      "url": "https://www.luleahockey.se/article/0jxtaiw1v-30c4d/view"
+    },
+    "berglund": {
+      "title": "Brynäs IF: återblick på Thomas Berglunds spelarkarriär",
+      "url": "https://www.brynas.se/article/y2snainrx-1ekad/view"
+    },
+    "berglund-number": {
+      "title": "Svenska Ishockeyförbundet: Luleås spelarlista, Berglund nummer 18",
+      "url": "https://stats.swehockey.se/Teams/Info/TeamRoster/9150"
+    },
+    "martensson": {
+      "title": "QuantHockey: Tony Mårtenssons grundseriestatistik i Brynäs",
+      "url": "https://www.quanthockey.com/hockey-stats/fi/profile.php?player=3747"
+    },
+    "martensson-transfer": {
+      "title": "IIHF Ice Times, september 2002: Mårtensson från Brynäs till Anaheim",
+      "url": "https://blob.iihf.com/iihf-media/iihfmvc/media/downloads/ice%20times/archive/iihf_nr4.pdf"
+    },
+    "isaksson": {
+      "title": "Ishockeyproffs: Ulf Isakssons karriär och statistik 1984/85",
+      "url": "https://ishockeyproffs.se/spelare/ulf-isaksson"
+    },
+    "aik-1984": {
+      "title": "Hockeysverige: AIK:s SM-guld 1984",
+      "url": "https://hockeysverige.se/intervju/bilden-aik-sm-guld-1984/"
+    },
+    "lilljebjorn": {
+      "title": "QuantHockey: Åke Lilljebjörn, 1993/94",
+      "url": "https://www.quanthockey.com/hockey-stats/en/profile.php?player=10592"
+    },
+    "lilljebjorn-program": {
+      "title": "Samtida matchprogram: Djurgården–Leksand, 19 oktober 1993",
+      "url": "https://difhistoria.se/wp-content/uploads/Matchprogram-Ishockey-Herr-1993-10-19-Djurgardens-IF-Leksands-IF.pdf"
+    },
+    "hv71-history": {
+      "title": "HV71: klubbhistorik och finalsegern 2008",
+      "url": "https://www.hv71.se/info-in-english"
+    },
+    "dickinson-stats": {
+      "title": "Elite Prospects: MoDos grundseriestatistik 2023/24",
+      "url": "https://www.eliteprospects.com/team/9/modo-hockey/stats/2023-2024/total?sort=pim"
+    },
+    "jansson-retirement": {
+      "title": "Sveriges Radio: Lars Jansson tvingas sluta, 14 september 2005",
+      "url": "https://www.sverigesradio.se/artikel/692409"
+    },
+    "zajkowski-stats": {
+      "title": "Svenska Ishockeyförbundet: målvaktsstatistik i Elitserien 2005/06",
+      "url": "https://stats.swehockey.se/Players/Statistics/LeadingGoaliesGAA/9146"
+    },
+    "forsberg-olympics": {
+      "title": "Sveriges Olympiska Kommitté: Peter Forsbergs fyra OS",
+      "url": "https://sok.se/idrottare/idrottare/p/peter-forsberg.html"
+    },
+    "forsberg-stats": {
+      "title": "QuantHockey: Peter Forsbergs säsongsstatistik",
+      "url": "https://www.quanthockey.com/hockey-stats/en/profile.php?player=1790"
+    },
+    "nanzen-stats": {
+      "title": "Elite Prospects: Tomas Nänzens säsongsstatistik",
+      "url": "https://www.eliteprospects.com/player/1158/thomas-nansen"
+    },
+    "sjalin-stats": {
+      "title": "Elite Prospects: Elitseriens grundseriestatistik 1975/76",
+      "url": "https://www.eliteprospects.com/league/elitserien/stats/1975-1976"
+    },
+    "modo-gold-1979": {
+      "title": "MoDos historiska spelartrupper: mästarlaget 1978/79",
+      "url": "https://h24-files.s3.amazonaws.com/65441/640097-T3jBl.pdf"
+    },
+    "hansson-stats": {
+      "title": "QuantHockey: Ulf Hanssons säsongsstatistik",
+      "url": "https://www.quanthockey.com/hockey-stats/en/profile.php?player=11494"
+    },
+    "shinnimin-stats": {
+      "title": "SHL: Brendan Shinnimins säsongsstatistik",
+      "url": "https://www.shl.se/athlete-profile/qTO-3ngwUONYq/?active-tab=stats"
+    },
+    "stalnacke-career": {
+      "title": "Elite Prospects: Erik Stålnackes säsonger i Skellefteå och Luleå",
+      "url": "https://www.eliteprospects.com/player/2969/erik-stalnacke"
+    },
+    "akerman-stats": {
+      "title": "Elite Prospects: Johan Åkermans grundserie- och slutspelsstatistik",
+      "url": "https://www.eliteprospects.com/player/1140/johan-akerman"
+    },
+    "nakyva-ranking": {
+      "title": "Svenska Ishockeyförbundet: backarnas poängliga i SHL 2017/18",
+      "url": "https://stats.swehockey.se/Players/Statistics/DefensemenLeaders/8121"
+    },
+    "nakyva-stats": {
+      "title": "Elite Prospects: Kristian Näkyväs grundserie- och slutspelsstatistik",
+      "url": "https://www.eliteprospects.com/player/16649/kristian-nakyva?total-stats-tab=teams"
+    },
+    "hurtig-stats": {
+      "title": "Eurohockey: Lars Hurtigs säsongsstatistik",
+      "url": "https://www.eurohockey.com/player/1185-lars-hurtig.html"
+    },
+    "ljungh-stats": {
+      "title": "Elite Prospects: Linköpings interna poängliga 2020/21",
+      "url": "https://www.eliteprospects.com/team/6/linkoping-hc/stats/2020-2021"
+    },
+    "weinhandl-lhc-stats": {
+      "title": "QuantHockey: Mattias Weinhandls grundserie- och slutspelsstatistik",
+      "url": "https://www.quanthockey.com/hockey-stats/en/profile.php?player=6232"
+    },
+    "svehla-stats": {
+      "title": "Elite Prospects: Robert Svehlas säsongsstatistik",
+      "url": "https://www.eliteprospects.com/player/1909/robert-%C5%A0vehla"
+    },
+    "akerstrom-stats": {
+      "title": "Eurohockey: Roger Åkerströms grundserie- och slutspelsstatistik",
+      "url": "https://www.eurohockey.com/player/3241-.html"
+    }
+  },
+  "jerseys": {
+    "jersey-01": [
+      "dickinson-captains",
+      "dickinson-season",
+      "dickinson-stats"
+    ],
+    "jersey-02": [
+      "jansson",
+      "jansson-retirement"
+    ],
+    "jersey-03": [
+      "naslund",
+      "modo-2000s"
+    ],
+    "jersey-04": [
+      "weinhandl-2000",
+      "weinhandl-career"
+    ],
+    "jersey-05": [
+      "weinhandl-2004",
+      "modo-2004"
+    ],
+    "jersey-06": [
+      "weinhandl-2000",
+      "weinhandl-career"
+    ],
+    "jersey-07": [
+      "hjalm",
+      "modo-shirts-1980",
+      "modo-captains"
+    ],
+    "jersey-08": [
+      "modo-2005",
+      "zajkowski-stats"
+    ],
+    "jersey-09": [
+      "sundstrom",
+      "modo-gold-2007"
+    ],
+    "jersey-10": [
+      "lundqvist",
+      "modo-shirts-1980",
+      "modo-1970s"
+    ],
+    "jersey-11": [
+      "forsberg",
+      "svehla",
+      "forsberg-olympics"
+    ],
+    "jersey-12": [
+      "forsberg",
+      "forsberg-stats"
+    ],
+    "jersey-13": [
+      "forsberg"
+    ],
+    "jersey-14": [
+      "modo-2004",
+      "modo-2000s"
+    ],
+    "jersey-15": [
+      "forsberg",
+      "forsberg-stats",
+      "forsberg-olympics"
+    ],
+    "jersey-16": [
+      "holmqvist-program",
+      "holmqvist",
+      "modo-shirts-1970"
+    ],
+    "jersey-17": [
+      "odling",
+      "modo-1970s",
+      "modo-shirts-1970"
+    ],
+    "jersey-18": [
+      "enstrom",
+      "modo-2005"
+    ],
+    "jersey-19": [
+      "modo-captains",
+      "nanzen-program",
+      "svehla",
+      "nanzen-stats"
+    ],
+    "jersey-20": [
+      "salo"
+    ],
+    "jersey-21": [
+      "sjalin-program",
+      "modo-shirts-1970",
+      "sjalin-stats",
+      "modo-gold-1979"
+    ],
+    "jersey-22": [
+      "modo-1983",
+      "modo-shirts-1980"
+    ],
+    "jersey-23": [
+      "hansson",
+      "modo-shirts-1980",
+      "hansson-stats"
+    ],
+    "other-01": [
+      "shinnimin",
+      "shinnimin-hattrick",
+      "shinnimin-stats"
+    ],
+    "other-02": [
+      "stalnacke",
+      "lulea-hattricks"
+    ],
+    "other-03": [
+      "stalnacke",
+      "stalnacke-career"
+    ],
+    "other-04": [
+      "hellgren"
+    ],
+    "other-05": [
+      "akerman",
+      "hv71-history",
+      "akerman-stats"
+    ],
+    "other-06": [
+      "forsman",
+      "forsman-seasons"
+    ],
+    "other-07": [
+      "boumedienne",
+      "boumedienne-seasons"
+    ],
+    "other-08": [
+      "nakyva",
+      "nakyva-roster",
+      "nakyva-ranking",
+      "nakyva-stats"
+    ],
+    "other-09": [
+      "hurtig",
+      "hurtig-stats"
+    ],
+    "other-10": [
+      "soderstrom",
+      "skelleftea-2026"
+    ],
+    "other-11": [
+      "ljungh",
+      "ljungh-stats"
+    ],
+    "other-12": [
+      "weinhandl-lhc",
+      "weinhandl-return",
+      "akerman",
+      "hv71-history",
+      "weinhandl-lhc-stats"
+    ],
+    "other-13": [
+      "svehla",
+      "svehla-stats"
+    ],
+    "other-14": [
+      "akerstrom",
+      "akerstrom-stats"
+    ],
+    "other-15": [
+      "akerstrom",
+      "akerstrom-stats"
+    ],
+    "other-16": [
+      "berglund",
+      "berglund-number"
+    ],
+    "other-17": [
+      "martensson",
+      "martensson-transfer"
+    ],
+    "other-18": [
+      "isaksson",
+      "aik-1984"
+    ],
+    "other-19": [
+      "lilljebjorn",
+      "lilljebjorn-program"
+    ]
+  }
+}

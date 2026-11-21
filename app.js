@@ -29,7 +29,7 @@ const messages = {
     loading: 'Laddar samlingen…', chooseJersey: 'Välj utvald tröja', pause: 'Pausa bildspelet', play: 'Starta bildspelet', previous: 'Föregående tröja', next: 'Nästa tröja',
     originals: 'Originaltröjor. Originalbilder. Varje detalj bevarad.', history: 'ETT STYCKE HOCKEYHISTORIA', collection: 'Samlingen', filterPlayers: 'Filtrera efter spelare',
     allJerseys: 'Alla tröjor', morePlayers: 'Fler spelare', searchPlaceholder: 'Sök spelare, lag eller säsong', empty: 'Inga tröjor matchar din sökning. Prova en annan spelare eller säsong.',
-    contactMessage: 'Jag är på ständig jakt efter nya intressanta tröjor', contact: 'Kontakt',
+    contactMessage: 'Jag är på ständig jakt efter nya intressanta tröjor', contact: 'Kontakt', researchSources: 'Källor till historiken',
     footerLove: 'En personlig samling. En gemensam kärlek till hockeyn.', backToTop: 'Till toppen', independent: 'En fristående samling utan koppling till klubbarna.', closeDetails: 'Stäng tröjdetaljer',
     jersey: 'Tröja', homeJersey: 'Hemmatröja', awayJersey: 'Bortatröja', preseasonJersey: 'Försäsongströja', blueJersey: 'Blå tröja',
     slideLabel: '{index} av {total}: {name}', numberShort: 'Nr', viewJersey: 'Visa tröjan', viewPhoto: 'Visa bild', viewNamedPhoto: 'Visa {name}, bild {index}',
@@ -49,7 +49,7 @@ const messages = {
     loading: 'Loading the collection…', chooseJersey: 'Choose featured jersey', pause: 'Pause automatic slideshow', play: 'Play automatic slideshow', previous: 'Previous jersey', next: 'Next jersey',
     originals: 'Original jerseys. Original photographs. Every detail preserved.', history: 'A PIECE OF HOCKEY HISTORY', collection: 'The collection', filterPlayers: 'Filter by player',
     allJerseys: 'All jerseys', morePlayers: 'More players', searchPlaceholder: 'Find a player, team or season', empty: 'No jerseys match your search. Try another player or season.',
-    contactMessage: 'I’m always on the lookout for interesting new jerseys', contact: 'Contact',
+    contactMessage: 'I’m always on the lookout for interesting new jerseys', contact: 'Contact', researchSources: 'Historical sources',
     footerLove: 'A personal collection. A shared love of the game.', backToTop: 'Back to top', independent: 'Independent collector’s archive. Not affiliated with the clubs.', closeDetails: 'Close jersey details',
     jersey: 'Jersey', homeJersey: 'Home jersey', awayJersey: 'Away jersey', preseasonJersey: 'Preseason jersey', blueJersey: 'Blue jersey',
     slideLabel: '{index} of {total}: {name}', numberShort: 'No.', viewJersey: 'View the jersey', viewPhoto: 'View photo', viewNamedPhoto: 'View {name} photo {index}',
@@ -157,9 +157,14 @@ function renderGrid() {
   $('#collection-count').textContent = t('count',{jerseys:collectionJerseys.length,players:new Set(collectionJerseys.map(j=>j.name)).size});
 }
 
+function researchDetails(jersey) {
+  if (!jersey.researchSources?.length) return '';
+  return `<div class="detail-research"><h3>${translated('researchSources')}</h3><ul>${jersey.researchSources.map(source => `<li><a href="${escapeHTML(source.url)}" target="_blank" rel="noopener">${escapeHTML(source.title)}</a></li>`).join('')}</ul></div>`;
+}
+
 function openJersey(id, photo = 0) {
   const j = jerseys.find(j => j.id === id); if(!j) return;
-  $('#detail-content').innerHTML = `<div class="detail-layout"><div class="detail-photos">${j.images.map((path,i) => `<a id="detail-photo-${i}" href="${imageURL(path)}" target="_blank" rel="noopener" aria-label="${translated('openOriginalPhoto',{index:i+1})}">${jerseyImage(j,path,t('fullPhoto',{name:j.name,season:j.season,index:i+1}))}<span>${translated('photoOf',{index:i+1,total:j.images.length})} · ${translated('openOriginal')}</span></a>`).join('')}</div><div class="detail-info"><p class="eyebrow">${translated(collectionOf(j) === 'other' ? 'otherEyebrow' : 'detailEyebrow')}</p><h2 id="detail-title">${escapeHTML(j.name)}</h2><dl class="detail-facts"><div><dt>${translated('jerseyNumber')}</dt><dd>#${j.number}</dd></div><div><dt>${translated('season')}</dt><dd>${escapeHTML(j.season || t('unspecified'))}</dd></div><div><dt>${translated('team')}</dt><dd>${escapeHTML(teamName(j))}</dd></div><div><dt>${translated('jersey')}</dt><dd>${escapeHTML(kindText(j))}</dd></div></dl>${j.description ? `<p class="detail-description">${escapeHTML(j.description)}</p>` : `<p class="detail-muted">${translated('detailFallback')}</p>`}<div class="detail-thumbnails" aria-label="${translated('jumpPhotos')}">${j.images.map((path,i) => `<button type="button" data-detail-photo="${i}" aria-label="${translated('jumpPhoto',{index:i+1})}">${jerseyImage(j,path,t('photo',{index:i+1}))}</button>`).join('')}</div></div></div>`;
+  $('#detail-content').innerHTML = `<div class="detail-layout"><div class="detail-photos">${j.images.map((path,i) => `<a id="detail-photo-${i}" href="${imageURL(path)}" target="_blank" rel="noopener" aria-label="${translated('openOriginalPhoto',{index:i+1})}">${jerseyImage(j,path,t('fullPhoto',{name:j.name,season:j.season,index:i+1}))}<span>${translated('photoOf',{index:i+1,total:j.images.length})} · ${translated('openOriginal')}</span></a>`).join('')}</div><div class="detail-info"><p class="eyebrow">${translated(collectionOf(j) === 'other' ? 'otherEyebrow' : 'detailEyebrow')}</p><h2 id="detail-title">${escapeHTML(j.name)}</h2><dl class="detail-facts"><div><dt>${translated('jerseyNumber')}</dt><dd>#${j.number}</dd></div><div><dt>${translated('season')}</dt><dd>${escapeHTML(j.season || t('unspecified'))}</dd></div><div><dt>${translated('team')}</dt><dd>${escapeHTML(teamName(j))}</dd></div><div><dt>${translated('jersey')}</dt><dd>${escapeHTML(kindText(j))}</dd></div></dl>${j.description ? `<p class="detail-description">${escapeHTML(j.description)}</p>` : `<p class="detail-muted">${translated('detailFallback')}</p>`}${researchDetails(j)}<div class="detail-thumbnails" aria-label="${translated('jumpPhotos')}">${j.images.map((path,i) => `<button type="button" data-detail-photo="${i}" aria-label="${translated('jumpPhoto',{index:i+1})}">${jerseyImage(j,path,t('photo',{index:i+1}))}</button>`).join('')}</div></div></div>`;
   dialog.showModal(); dialog.scrollTop=0; syncPlayback();
   if(photo > 0) document.getElementById(`detail-photo-${photo}`).scrollIntoView({block:'start',behavior:'instant'});
 }
@@ -212,4 +217,4 @@ applyLanguage();
 // Apply the initial collection theme before enabling tab-switch transitions.
 requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('theme-ready')));
 
-fetch('collection.json', {cache:'no-cache'}).then(response=>{if(!response.ok)throw new Error('Unable to load collection');return response.json();}).then(data=>{jerseys=data;imageVersions.clear();jerseys.forEach(j=>Object.entries(j.imageVersions || {}).forEach(([path,version])=>imageVersions.set(path,version)));featured=jerseys.filter(j=>collectionOf(j)==='modo' && Number.isFinite(j.featured)).sort((a,b)=>a.featured-b.featured);renderHero();renderGrid();}).catch(()=>{loadFailed=true;$('#hero-slides').innerHTML=`<p class="loading">${translated('loadError')}</p>`;});
+fetch('collection.json', {cache:'no-cache'}).then(response=>{if(!response.ok)throw new Error('Unable to load collection');return response.json();}).then(data=>{jerseys=data;imageVersions.clear();jerseys.forEach(j=>Object.entries(j.imageVersions || {}).forEach(([path,version])=>imageVersions.set(path,version)));featured=jerseys.filter(j=>collectionOf(j)==='modo' && Number.isFinite(j.featured)).sort((a,b)=>a.featured-b.featured);renderHero();renderGrid();const jerseyId=new URLSearchParams(location.search).get('jersey');const selectedJersey=jerseys.find(j=>j.id===jerseyId);if(selectedJersey){selectCollection(collectionOf(selectedJersey));openJersey(selectedJersey.id);}}).catch(()=>{loadFailed=true;$('#hero-slides').innerHTML=`<p class="loading">${translated('loadError')}</p>`;});

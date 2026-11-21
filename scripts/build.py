@@ -3,6 +3,7 @@ import json
 import hashlib
 import shutil
 from pathlib import Path
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'dist'
@@ -20,10 +21,20 @@ for filename in ('styles.css', 'app.js'):
 (OUT / 'index.html').write_text(html)
 shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
 collection = json.loads((ROOT / 'collection.json').read_text())
+research = json.loads((ROOT / 'research' / 'sources.json').read_text())
+if set(research['jerseys']) - {jersey['id'] for jersey in collection}:
+    raise ValueError('Historical sources reference an unknown jersey')
 for jersey in collection:
     text = (ROOT / jersey['textFile']).read_bytes() if jersey.get('textFile') else b''
     encoding = 'utf-16' if text.startswith((b'\xff\xfe', b'\xfe\xff')) else 'utf-8-sig'
     jersey['description'] = text.decode(encoding).strip()
+    source_ids = research['jerseys'].get(jersey['id'], [])
+    if source_ids:
+        jersey['researchSources'] = [research['sources'][key] for key in source_ids]
+        for source in jersey['researchSources']:
+            url = urlsplit(source['url'])
+            if url.scheme != 'https' or not url.netloc:
+                raise ValueError('Historical source must use an HTTPS URL')
     jersey['imageVersions'] = {}
     for image in jersey['images']:
         target = OUT / image

@@ -127,7 +127,7 @@
   },
   {
     "id": "jersey-10",
-    "name": "Per Lundkvist",
+    "name": "Per Lundqvist",
     "number": 8,
     "season": "1979-80",
     "kind": "Jersey",
@@ -212,7 +212,7 @@
   },
   {
     "id": "jersey-16",
-    "name": "Peter Holmkvist",
+    "name": "Peter Holmqvist",
     "number": 1,
     "season": "",
     "kind": "Jersey",
@@ -459,7 +459,7 @@
     "season": "1985-87",
     "kind": "Jersey",
     "folder": "Övriga Lag/Lars Hurtig Luleå 1985-87",
-    "textFile": null,
+    "textFile": "Övriga Lag/Lars Hurtig Luleå 1985-87/Lars Hurtig.txt",
     "images": [
       "Övriga Lag/Lars Hurtig Luleå 1985-87/Lars Hurtig Luleå 1985_87_1_Untitled.jpg",
       "Övriga Lag/Lars Hurtig Luleå 1985-87/Lars Hurtig Luleå 1985_87_2_Untitled.jpg"
@@ -565,7 +565,7 @@
   {
     "id": "other-16",
     "name": "Thomas “Bulan” Berglund",
-    "number": 10,
+    "number": 18,
     "team": "Luleå Hockey",
     "collection": "other",
     "season": "",
